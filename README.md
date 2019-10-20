@@ -1,5 +1,4 @@
 # Course Project: Character Relationship Visualization
-![Example](./imgs/example.png)
 ## TODO
 - 人物名字遮挡问题
 - 对白情感倾向性分析，link颜色
@@ -13,3 +12,4 @@
 - movie_scripts: raw movie scripts in text
 - d3.v4.min.js: d3 source file
 - index.html
+![Example](./imgs/example.png)
