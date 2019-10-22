@@ -3,7 +3,7 @@
 <style>
 
 .links line {
-  stroke: #999;
+  /* stroke: #999; */
   stroke-opacity: 0.6;
 }
 
@@ -27,7 +27,8 @@ var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
-var color = d3.scaleOrdinal(d3.schemeCategory20);
+var nodeColor = d3.scaleOrdinal(d3.schemeCategory20);
+var edgeColor = d3.scaleOrdinal(d3.schemeCategory10);
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }))
@@ -42,6 +43,7 @@ d3.json("jsons/10tings.json", function(error, graph) {
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
+      .attr("stroke", function(d) { return edgeColor(d.value); })
       .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
 
   var node = svg.append("g")
@@ -51,8 +53,8 @@ d3.json("jsons/10tings.json", function(error, graph) {
     .enter().append("g")
     
   var circles = node.append("circle")
-      .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
+      .attr("r", function(d) { return 4 * Math.pow(d.group, 0.3); })
+      .attr("fill", function(d) { return nodeColor(d.group); })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
