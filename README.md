@@ -1,9 +1,8 @@
 # Course Project: Character Relationship Visualization
 ## TODO
-- 人物名字遮挡问题
-- 对白情感倾向性分析，link颜色
-- 分scene动画，时间轴
-- 其他交互功能
+- 时间轨道
+- 注意力高亮
+- 角色聚类
 ## Project Structure
 - backend: movie script parser and optional project backend
     - parse.py: movie script parser to json
