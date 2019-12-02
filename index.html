@@ -44,14 +44,16 @@ d3.json("jsons/10tings.json", function(error, graph) {
     .data(graph.links)
     .enter().append("line")
       .attr("stroke", function(d) { return edgeColor(d.value); })
-      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+      .attr("stroke-width", function(d) { return Math.sqrt(d.value); })
+            .style("opacity", 1);
+
 
   var node = svg.append("g")
       .attr("class", "nodes")
     .selectAll("g")
     .data(graph.nodes)
-    .enter().append("g")
-    
+    .enter().append("g");
+
   var circles = node.append("circle")
       .attr("r", function(d) { return 4 * Math.pow(d.group, 0.3); })
       .attr("fill", function(d) { return nodeColor(d.group); })
@@ -59,6 +61,30 @@ d3.json("jsons/10tings.json", function(error, graph) {
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
+
+  circles.on("mouseover",function(d){
+      circles.style("opacity", 0.2);
+      d3.select(this)
+          .style("opacity", 1.0);
+
+      var attention_name = d.id;
+
+      link.style("opacity", 0.2);
+
+      d3.select("body").selectAll("line").data(graph.links).style("opacity", function (d2) {
+          if(d2.target.id == attention_name || d2.source.id == attention_name){
+              return 1.0;
+          }else{
+              return 0.2;
+          }
+      });
+
+  });
+
+  circles.on("mouseout",function(d) {
+      circles.style("opacity", 1.0);
+      link.style("opacity", 1.0);
+  });
 
   var lables = node.append("text")
       .text(function(d) {
