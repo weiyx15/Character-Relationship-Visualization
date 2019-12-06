@@ -13,6 +13,8 @@
 - index.html
 ## Visualization
 - LPA clustering
+
 ![lpa](./imgs/LPA_clustering.png)
 - Attention highlight
+
 ![attention](./imgs/Attention.png)
