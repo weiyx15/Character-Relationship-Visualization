@@ -11,4 +11,8 @@
 - movie_scripts: raw movie scripts in text
 - d3.v4.min.js: d3 source file
 - index.html
-![Example](./imgs/example.png)
+## Visualization
+- LPA clustering
+![lpa](./imgs/LPA_clustering.png)
+- Attention highlight
+![attention](./imgs/Attention.png)
