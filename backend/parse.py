@@ -113,7 +113,7 @@ class ScriptParser:
         return triples
 
     @staticmethod
-    def _to_json_form(node_dict: dict, edge_dict: dict) -> List[Dict]:
+    def _to_json_form(node_dict: dict, edge_dict: dict, dialog_dict: dict) -> List[Dict]:
         """
         Args:
             node_dict: {"name": appearance times}
@@ -126,11 +126,13 @@ class ScriptParser:
             edge list: [{"source": name, "target": name, "value": appearance times}]
             refer to ../jsons/miserables.json
         """
-        ret = {"nodes": [], "links": []}
+        ret = {"nodes": [], "links": [], "dialogs": []}
         for name, val in node_dict.items():
             ret["nodes"].append({"id":name, "group": val})
         for src_tgt, val in edge_dict.items():
             ret["links"].append({"source": src_tgt[0], "target": src_tgt[1], "value":val})
+        for src_tgt, dialog in dialog_dict.items():
+            ret["dialogs"].append({"source": src_tgt[0], "target": src_tgt[1], "dialogs":dialog})
         return ret
 
     def scene_json(self):
@@ -144,16 +146,25 @@ class ScriptParser:
         """
         node_dict = dict()
         edge_dict = dict()
+
+        # added by chenyufeng for dialogs info
+        dialog_dict = dict()
+
         prev_triple = (None, None, None)
         json_lst = list()
+
         for triple in self.triples:
             node_dict[triple[1]] = node_dict.setdefault(triple[1], 0) + 1
             if prev_triple[0] is not None:
                 if triple[0] == prev_triple[0]:
                     edge_dict[(prev_triple[1], triple[1])] = \
                         edge_dict.setdefault((prev_triple[1], triple[1]), 0) + 1
+
+                    # added by chenyufeng for dialogs info
+                    dialog_dict[(prev_triple[1], triple[1])] = \
+                        triple[2]
                 else:
-                    json_lst.append(ScriptParser._to_json_form(node_dict, edge_dict))
+                    json_lst.append(ScriptParser._to_json_form(node_dict, edge_dict, dialog_dict))
             prev_triple = triple
         return json_lst
 
@@ -161,5 +172,5 @@ class ScriptParser:
 if __name__ == '__main__':
     sp = ScriptParser('../movie_scripts/10tings.txt')
     json_lst = sp.scene_json()
-    with open('../jsons/10tings.json', 'w') as f:
+    with open('../jsons/10tings_with_dialogs.json', 'w') as f:
         json.dump(json_lst[-1], f)

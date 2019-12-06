@@ -109,7 +109,7 @@ def get_afterLPA_json(p, cluster_group):
     dict_data['nodes'] = nodes
     #保存新json
 
-    file_path = "../jsons/10tings_afterLPA.json"
+    file_path = "../jsons/10tings_afterLPA_with_dialogs.json"
     json.dump(dict_data, codecs.open(file_path, 'w', encoding='utf-8'), separators=(',', ':'),
               sort_keys=True,
               indent=4)
@@ -144,4 +144,4 @@ if __name__ == '__main__':
 
     # print(cluster_group)
 
-    get_afterLPA_json("../jsons/10tings.json",cluster_group)
+    get_afterLPA_json("../jsons/10tings_with_dialogs.json",cluster_group)
