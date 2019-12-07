@@ -19,7 +19,8 @@ text {
 </style>
 <body>
     <div style="position:absolute; left:40px; bottom:10px; ">
-        <p>节点详细信息</p>
+        <p id="point_info_label"></p>
+        <p id="point_info" style="font-size: 15px;background: rgba(235, 232, 232, 0.548);border-radius: 10px;margin-bottom: 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;border-left-width: 5px;padding-left: 10px;margin-top: 15px;"></p>
         <p id="dialog_info" style="font-size: 15px;background: rgba(235, 232, 232, 0.548);border-radius: 10px;margin-bottom: 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;border-left-width: 5px;padding-left: 10px;margin-top: 15px;"></p>
     </div>
     <svg width="960" height="600"></svg>
@@ -76,13 +77,20 @@ text {
 
           link.style("opacity", 0.2);
 
+          adjacent_nodes = new Set();
+
           d3.select("body").selectAll("line").data(graph.links).style("opacity", function (d2) {
               if(d2.target.id == attention_name || d2.source.id == attention_name){
+                  adjacent_nodes.add(d2.target.id);
+                  adjacent_nodes.add(d2.source.id);
                   return 1.0;
               }else{
                   return 0.2;
               }
           });
+
+          var point_info_label = document.getElementById('point_info_label');
+          point_info_label.innerHTML = '节点详细信息';
 
           var attentioned_dialogs = "";
 
@@ -97,6 +105,19 @@ text {
           var p_dialog_info = document.getElementById('dialog_info');
           p_dialog_info.innerHTML = attentioned_dialogs;
 
+
+          var point_info = document.getElementById('point_info');
+          var attentioned_point_info = '';
+          attentioned_point_info += '<b>人物姓名</b>:&nbsp' + d.id + '<br>';
+          attentioned_point_info += '<b>节点的度</b>:&nbsp' + d.group + '<br>';
+          attentioned_point_info += '<b>相邻节点</b>:&nbsp';
+
+          adjacent_nodes.forEach((item,index)=>{
+              attentioned_point_info += item + "&nbsp";
+          });
+          point_info.innerHTML = attentioned_point_info;
+
+
       });
 
       circles.on("mouseout",function(d) {
@@ -104,6 +125,10 @@ text {
           link.style("opacity", 1.0);
           var p_dialog_info = document.getElementById('dialog_info');
           p_dialog_info.innerHTML = '';
+          var p_point_info = document.getElementById('point_info');
+          p_point_info.innerHTML = '';
+           var point_info_label = document.getElementById('point_info_label');
+          point_info_label.innerHTML = '';
       });
 
       var lables = node.append("text")
