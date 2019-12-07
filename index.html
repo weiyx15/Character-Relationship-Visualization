@@ -109,8 +109,8 @@ text {
           var point_info = document.getElementById('point_info');
           var attentioned_point_info = '';
           attentioned_point_info += '<b>人物姓名</b>:&nbsp' + d.id + '<br>';
-          attentioned_point_info += '<b>节点的度</b>:&nbsp' + d.group + '<br>';
-          attentioned_point_info += '<b>相邻节点</b>:&nbsp';
+          attentioned_point_info += '<b>角色重要程度</b>:&nbsp' + d.group + '<br>';
+          attentioned_point_info += '<b>相关人物</b>:&nbsp';
 
           adjacent_nodes.forEach((item,index)=>{
               attentioned_point_info += item + "&nbsp";
