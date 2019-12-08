@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
+<meta charset="utf-8">
 <html>
   <head>
     <title>Node aggregation & edge bundling for large graphs</title>
@@ -30,9 +32,13 @@ line.link {
     </style>
   </head>
   <body>
+  <div style="position:absolute; left:40px; bottom:10px; ">
+        <p id="point_info_label"></p>
+        <p id="point_info" style="font-size: 15px;background: rgba(235, 232, 232, 0.548);border-radius: 10px;margin-bottom: 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;border-left-width: 5px;padding-left: 10px;margin-top: 15px;"></p>
+    </div>
     <script type="text/javascript">
 var width = 1800,     // svg width
-    height = 900,     // svg height
+    height = 600,     // svg height
     dr = 4,      // default point radius
     off = 15,    // cluster hull offset
     expand = {}, // expanded clusters
@@ -222,7 +228,6 @@ function init() {
            30 * Math.min((n1.link_count || (n1.group !== n2.group ? n1.group_data.link_count : 0)),
                          (n2.link_count || (n1.group !== n2.group ? n2.group_data.link_count : 0))),
            100);
-      //return 150;
     })
     .linkStrength(function(l, i) {
     return 1;
@@ -272,11 +277,41 @@ function init() {
             init();
             has_expand = expand[d.group];
         }
+      }).on("mouseover", function(d) {
+          node.style("opacity", 0.2);
+          d3.select(this).style("opacity", 1.0);
+          link.style("opacity", 0.2);
+
+          var point_info_label = document.getElementById('point_info_label');
+          var point_info = document.getElementById('point_info');
+          var attentioned_point_info = '';
+
+          if (d.size) {                 // group node
+            point_info_label.innerHTML = '聚类详细信息';
+            attentioned_point_info += '<b>人物姓名列表</b>:&nbsp';
+            for (var n in data.nodes) {
+                if (data.nodes[n].group === d.group) {
+                    attentioned_point_info += data.nodes[n].id + '; ';
+                }
+            }
+          } else {                      // leaf node
+            point_info_label.innerHTML = '节点详细信息';
+            attentioned_point_info += '<b>人物姓名</b>:&nbsp' + d.id + '<br>';
+            attentioned_point_info += '<b>角色重要程度</b>:&nbsp' + 1 + '<br>';
+          }
+          point_info.innerHTML = attentioned_point_info;
+      }).on("mouseout",function(d) {
+          node.style("opacity", 1.0);
+          link.style("opacity", 1.0);
+          var p_point_info = document.getElementById('point_info');
+          p_point_info.innerHTML = '';
+          var point_info_label = document.getElementById('point_info_label');
+          point_info_label.innerHTML = '';
       });
 
   node.call(force.drag);
 
-  force.on("tick", function() {
+    force.on("tick", function() {
     if (!hull.empty()) {
       hull.data(convexHulls(net.nodes, getGroup, off))
           .attr("d", drawCluster);
