@@ -37,7 +37,7 @@ line.link {
         <p id="point_info" style="font-size: 15px;background: rgba(235, 232, 232, 0.548);border-radius: 10px;margin-bottom: 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;border-left-width: 5px;padding-left: 10px;margin-top: 15px;"></p>
     </div>
     <script type="text/javascript">
-var width = 1800,     // svg width
+var width = 1200,     // svg width
     height = 600,     // svg height
     dr = 4,      // default point radius
     off = 15,    // cluster hull offset
@@ -232,7 +232,7 @@ function init() {
     .linkStrength(function(l, i) {
     return 1;
     })
-    .gravity(0.05)   // gravity+charge tweaked to ensure good 'grouped' view (e.g. green group not smack between blue&orange, ...
+    // .gravity(0.05)   // gravity+charge tweaked to ensure good 'grouped' view (e.g. green group not smack between blue&orange, ...
     .charge(-600)    // ... charge is important to turn single-linked groups to the outside
     .friction(0.5)   // friction adjusted to get dampened display: less bouncy bouncy ball
       .start();
@@ -245,7 +245,6 @@ function init() {
       .attr("d", drawCluster)
       .style("fill", function(d) { return fill(d.group); })
       .on("click", function(d) {
-      console.log("hull click", d, arguments, this, expand[d.group]);
       has_expand = false;
       expand[d.group] = false;
       init();
@@ -271,7 +270,6 @@ function init() {
       .attr("cy", function(d) { return d.y; })
       .style("fill", function(d) { return fill(d.group); })
       .on("click", function(d) {
-        console.log("node click", d, arguments, this, expand[d.group]);
         if (!has_expand || expand[d.group]) {
             expand[d.group] = !expand[d.group];
             init();
