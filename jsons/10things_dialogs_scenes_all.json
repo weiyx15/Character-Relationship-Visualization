@@ -1,0 +1,3212 @@
+{
+    "dialogs": [
+        {
+            "source": "RIDER",
+            "target": "KAT",
+            "dialog": "Hey -- sorry."
+        },
+        {
+            "source": "BIANCA",
+            "target": "CHASTITY",
+            "dialog": "Did you change your hair?"
+        },
+        {
+            "source": "CHASTITY",
+            "target": "BIANCA",
+            "dialog": "No."
+        },
+        {
+            "source": "BIANCA",
+            "target": "BOY",
+            "dialog": "You might wanna think about it"
+        },
+        {
+            "source": "BOY",
+            "target": "GIRL",
+            "dialog": "(adoring) Hey, Bianca."
+        },
+        {
+            "source": "GIRL",
+            "target": "MISS PERKY",
+            "dialog": "Awesome shoes."
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "CAMERON",
+            "dialog": "(continuing) Any questions?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MISS PERKY",
+            "dialog": "I don't think so, ma'am"
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "PATRICK",
+            "dialog": "(continuing) Patrick Verona.  I see we're making our visits a weekly ritual."
+        },
+        {
+            "source": "PATRICK",
+            "target": "MISS PERKY",
+            "dialog": "I missed you."
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "PATRICK",
+            "dialog": "It says here you exposed yourself to a group of freshmen girls."
+        },
+        {
+            "source": "PATRICK",
+            "target": "MISS PERKY",
+            "dialog": "It was a bratwurst.  I was eating lunch."
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "MICHAEL",
+            "dialog": "With the teeth of your zipper?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "You the new guy?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "So they tell me..."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "(continuing) So -- which Dakota you from?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "North, actually.  How'd you   ?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "I was kidding. People actually live there?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "Yeah.  A couple.  We're outnumbered by the cows, though."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "How many people were in your old school?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "Thirty-two."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "Get out!"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "How many people go here?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "Couple thousand. Most of them evil"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "(continuing) Those 're your cowboys."
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "That I'm used to."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "DEREK",
+            "dialog": "(continuing) Derek - save some for after lunch, bub?"
+        },
+        {
+            "source": "DEREK",
+            "target": "CAMERON",
+            "dialog": "(very stoned) Michael, my brother, peace"
+        },
+        {
+            "source": "CAMERON",
+            "target": "DEREK",
+            "dialog": "So where do you fit in all this?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "(continuing) are fixing my Saab.  Yuppie greed is back, my friend."
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "That girl -- I --"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "You burn, you pine, you perish?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "Who is she?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "Bianca Stratford.  Sophomore. Don't even think about it"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "Why not?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "MRS. BLAISE",
+            "dialog": "I could start with your haircut, but it doesn't matter.  She's not allowed to date until her older sister does.  And that's an impossibility."
+        },
+        {
+            "source": "MRS. BLAISE",
+            "target": "KAT",
+            "dialog": "Well, then.  Oh, yes.  I guess that does it for our analysis of The Old Man and the Sea.  Any other comments? (with dread) Kat?"
+        },
+        {
+            "source": "KAT",
+            "target": "MRS. BLAISE",
+            "dialog": "Why didn't we just read the Hardy Boys?"
+        },
+        {
+            "source": "MRS. BLAISE",
+            "target": "KAT",
+            "dialog": "I'm sorry?"
+        },
+        {
+            "source": "KAT",
+            "target": "JOEY",
+            "dialog": "(continuing) Frankly, I'm baffled as to why we still revere Hemingway.  He was an abusive, alcoholic misogynist who had a lot of cats."
+        },
+        {
+            "source": "JOEY",
+            "target": "MRS. BLAISE",
+            "dialog": "As opposed to a bitter self-righteous hag who has no friends?"
+        },
+        {
+            "source": "MRS. BLAISE",
+            "target": "KAT",
+            "dialog": "That's enough, Mr. Dorsey."
+        },
+        {
+            "source": "KAT",
+            "target": "PATRICK",
+            "dialog": "(continuing) What about Colette?  Charlotte Bronte? Simone de Beauvoir?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "Mother Goose?"
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "KAT",
+            "dialog": "Katarina Stratford.  My, my.  You've been terrorizing Ms. Blaise again."
+        },
+        {
+            "source": "KAT",
+            "target": "MISS PERKY",
+            "dialog": "Expressing my opinion is not a terrorist action."
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "KAT",
+            "dialog": "Well, yes, compared to your other choices of expression this year, today's events are quite mild.  By the way, Bobby Rictor's gonad retrieval operation went quite well, in case you're interested."
+        },
+        {
+            "source": "KAT",
+            "target": "MISS PERKY",
+            "dialog": "I still maintain that he kicked himself in the balls.  I was merely a spectator."
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "KAT",
+            "dialog": "The point is Kat -- people perceive you as somewhat ..."
+        },
+        {
+            "source": "KAT",
+            "target": "MISS PERKY",
+            "dialog": "Tempestuous?"
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "KAT",
+            "dialog": "(continuing) You might want to work on that"
+        },
+        {
+            "source": "KAT",
+            "target": "MISS PERKY",
+            "dialog": "As always, thank you for your excellent guidance."
+        },
+        {
+            "source": "TEACHER",
+            "target": "BIANCA",
+            "dialog": "(continuing) Ms. Stratford, do you care to comment on what you've read so far?"
+        },
+        {
+            "source": "BIANCA",
+            "target": "TEACHER",
+            "dialog": "Not really."
+        },
+        {
+            "source": "TEACHER",
+            "target": "MANDELLA",
+            "dialog": "Mandella -- since you're assisting us, you might as well comment.  I'm assuming you read the assignment."
+        },
+        {
+            "source": "MANDELLA",
+            "target": "TEACHER",
+            "dialog": "Uh, yeah, I read it all"
+        },
+        {
+            "source": "TEACHER",
+            "target": "MANDELIA",
+            "dialog": "The whole play^"
+        },
+        {
+            "source": "MANDELIA",
+            "target": "TEACHER",
+            "dialog": "The whole folio.  All the plays."
+        },
+        {
+            "source": "TEACHER",
+            "target": "MANDELLA",
+            "dialog": "(disbelieving) You've read every play by William Shakespeare?"
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "Haven't you?"
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "The fact that you're cutting gym so you can T.A. Sophomore English just to hear his name, is a little without in itself if you ask me."
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "Who's that?"
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "Patrick Verona   Random skid."
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "That's Pat Verona? The one who was gone for a year? I heard he was doing porn movies."
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "I'm sure he's completely incapable of doing anything that interesting."
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "He always look so"
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "(continuing) Mandella, eat.  Starving yourself is a very slow way to die."
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "Just a little."
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "What's this?"
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "An attempted slit."
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "I realize that the men of this fine institution are severely lacking, but killing yourself so you can be with William Shakespeare is beyond the scope of normal teenage obsessions.  You're venturing far past daytime talk show fodder and entering the world of those who need very expensive therapy."
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "But imagine the things he'd say during sex."
+        },
+        {
+            "source": "KAT",
+            "target": "COHORT",
+            "dialog": "Okay, say you do it.  You kill yourself, you end up in wherever you end up and he's there.  Do you really think he's gonna wanna dace a ninety pound compulsive who failed volleyball?"
+        },
+        {
+            "source": "COHORT",
+            "target": "JOEY",
+            "dialog": "Virgin alert."
+        },
+        {
+            "source": "JOEY",
+            "target": "MANDELLA",
+            "dialog": "Lookin' good, ladies."
+        },
+        {
+            "source": "MANDELLA",
+            "target": "CAMERON",
+            "dialog": "Tragic."
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "Why do girls like that always like guys like that?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "Because they're bred to.  Their mothers liked guys like that, and their grandmothers before them. Their gene pool is rarely diluted."
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "He always have that shit-eating grin?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "(continuing) You know French?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "Sure do ... my Mom's from Canada"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "Guess who just signed up for a tutor?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "You mean I'd get a chance to talk to her?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "JOEY",
+            "dialog": "You could consecrate with her, my friend."
+        },
+        {
+            "source": "JOEY",
+            "target": "KAT",
+            "dialog": "(re her dress) The vintage look is over, Kat. Haven't you been reading your Sassy?"
+        },
+        {
+            "source": "KAT",
+            "target": "JOEY",
+            "dialog": "Yeah, and I noticed the only part of you featured in your big Kmart spread was your elbow.  Tough break."
+        },
+        {
+            "source": "JOEY",
+            "target": "KAT",
+            "dialog": "(practically spitting) They're running the rest of me next month."
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "The people at this school are so incredibly foul."
+        },
+        {
+            "source": "MANDELLA",
+            "target": "JOEY",
+            "dialog": "You could always go with me.  I'm sure William has some friends."
+        },
+        {
+            "source": "JOEY",
+            "target": "MANDELLA",
+            "dialog": "Need a ride, ladies?"
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "That's a charming new development"
+        },
+        {
+            "source": "KAT",
+            "target": "CAMERON",
+            "dialog": "(yelling) Remove head from sphincter!  Then pedal!"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "You all right?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "Yeah, just a minor encounter with the shrew."
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "That's her?  Bianca's sister?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "The mewling, rampalian wretch herself."
+        },
+        {
+            "source": "KAT",
+            "target": "SHARON",
+            "dialog": "\"Undulating with desire, Adrienne removes her crimson cape, revealing her creamy --\""
+        },
+        {
+            "source": "SHARON",
+            "target": "WALTER",
+            "dialog": "In the microwave."
+        },
+        {
+            "source": "WALTER",
+            "target": "KAT",
+            "dialog": "(to Kat) Make anyone cry today?"
+        },
+        {
+            "source": "KAT",
+            "target": "BIANCA",
+            "dialog": "(continuing) Where've you been?"
+        },
+        {
+            "source": "BIANCA",
+            "target": "WALTER",
+            "dialog": "(eyeing Walter) Nowhere... Hi, Daddy."
+        },
+        {
+            "source": "WALTER",
+            "target": "KAT",
+            "dialog": "Hello, precious."
+        },
+        {
+            "source": "KAT",
+            "target": "WALTER",
+            "dialog": "How touching."
+        },
+        {
+            "source": "WALTER",
+            "target": "KAT",
+            "dialog": "What's this?  It says Sarah Lawrence?"
+        },
+        {
+            "source": "KAT",
+            "target": "SHARON",
+            "dialog": "I guess I got in"
+        },
+        {
+            "source": "SHARON",
+            "target": "WALTER",
+            "dialog": "What's a synonym for throbbing?"
+        },
+        {
+            "source": "WALTER",
+            "target": "KAT",
+            "dialog": "Sarah Lawrence is on the other side of the country."
+        },
+        {
+            "source": "KAT",
+            "target": "WALTER",
+            "dialog": "I know."
+        },
+        {
+            "source": "WALTER",
+            "target": "KAT",
+            "dialog": "I thought we decided you were going to school here.  At U of 0."
+        },
+        {
+            "source": "KAT",
+            "target": "BIANCA",
+            "dialog": "You decided."
+        },
+        {
+            "source": "BIANCA",
+            "target": "KAT",
+            "dialog": "Is there even a question that we want her to stay?"
+        },
+        {
+            "source": "KAT",
+            "target": "SHARON",
+            "dialog": "Ask Bianca who drove her home"
+        },
+        {
+            "source": "SHARON",
+            "target": "WALTER",
+            "dialog": "Swollen...turgid."
+        },
+        {
+            "source": "WALTER",
+            "target": "BIANCA",
+            "dialog": "(to Bianca; upset) Who drove you home?"
+        },
+        {
+            "source": "BIANCA",
+            "target": "WALTER",
+            "dialog": "Now don't get upset. Daddy, but there's this boy... and I think he might ask..."
+        },
+        {
+            "source": "WALTER",
+            "target": "BIANCA",
+            "dialog": "No! You're not dating until your sister starts dating.  End of discussion."
+        },
+        {
+            "source": "BIANCA",
+            "target": "WALTER",
+            "dialog": "What if she never starts dating?"
+        },
+        {
+            "source": "WALTER",
+            "target": "BIANCA",
+            "dialog": "Then neither will you.  And I'll get to sleep at night."
+        },
+        {
+            "source": "BIANCA",
+            "target": "KAT",
+            "dialog": "But it's not fair -- she's a mutant, Daddy!"
+        },
+        {
+            "source": "KAT",
+            "target": "WALTER",
+            "dialog": "This from someone whose diary is devoted to favorite grooming tips?"
+        },
+        {
+            "source": "WALTER",
+            "target": "BIANCA",
+            "dialog": "This is why you're not dating until your sister does."
+        },
+        {
+            "source": "BIANCA",
+            "target": "WALTER",
+            "dialog": "But she doesn't want to date."
+        },
+        {
+            "source": "WALTER",
+            "target": "SHARON",
+            "dialog": "(continuing) Jesus!  Can a man even grab a sandwich before you women start dilating?"
+        },
+        {
+            "source": "SHARON",
+            "target": "WALTER",
+            "dialog": "Tumescent!"
+        },
+        {
+            "source": "WALTER",
+            "target": "SHARON",
+            "dialog": "(to Sharon; as he leaves) You're not helping."
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "Can we make this quick?  Roxanne Korrine and Andrew Barrett are having an incredibly horrendous public break- up on the quad.  Again."
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "(looking down) Okay... then how 'bout we try out some French cuisine.  Saturday?  Night?"
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "You're asking me out.  That's so cute. What's your name again?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "(embarrassed) Forget it."
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "No, no, it's my fault -- we didn't have a proper introduction ---"
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "Cameron."
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does."
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "Why?"
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "Unsolved mystery.  She used to be really popular when she started high school, then it was just like she got sick of it or something."
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "That's a shame."
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "Gosh, if only we could find Kat a boyfriend..."
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "Let me see what I can do."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "You're in school for one day and you ask out the most beautiful girl?  Do you have no concept of the high school social code?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "I teach her French, get to know her, dazzle her with charm and she falls in love with me."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "Unlikely, but even so, she still can't go out with you.  So what's the point?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "What about him?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "(confused) You wanna go out with him?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "(impatient) No - he could wrangle with the sister."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "What makes you think he'll do it?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "He seems like he thrives on danger"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "No kidding.  He's a criminal.  I heard he lit a state trooper on fire.  He just got out of Alcatraz..."
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "They always let felons sit in on Honors Biology?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "I'm serious, man, he's whacked.  He sold his own liver on the black market so he could buy new speakers."
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "Forget his reputation.  Do you think we've got a plan or not?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "Did she actually say she'd go out with you?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "That's what I just said"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "You know, if you do go out with Bianca, you'd be set.  You'd outrank everyone. Strictly A-list.  With me by your side."
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "I thought you hated those people."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "Hey -- I've gotta have a few clients when I get to Wall Street."
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "So now all we gotta do is talk to him."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "I'll let you handle that."
+        },
+        {
+            "source": "PEPE",
+            "target": "CAMERON",
+            "dialog": "Some people like the Colombian, but it all depends on your acidity preference. Me?  I prefer East African and Indonesian.  You start the day with a Sumatra Boengie or maybe and Ethiopian Sidamo in your cup, you're that much farther ahead than someone drinkin' Cosia Rican or Kona -- you know what I mean?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "JOEY",
+            "dialog": "Hey."
+        },
+        {
+            "source": "JOEY",
+            "target": "MICHAEL",
+            "dialog": "Are you lost?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "JOEY",
+            "dialog": "Nope - just came by to chat"
+        },
+        {
+            "source": "JOEY",
+            "target": "MICHAEL",
+            "dialog": "We don't chat."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "JOEY",
+            "dialog": "Well, actually, I thought I'd run an idea by you.  You know, just to see if you're interested."
+        },
+        {
+            "source": "JOEY",
+            "target": "MICHAEL",
+            "dialog": "We're not."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "JOEY",
+            "dialog": "(continuing) But she can't go out with you because her sister is this insane head case and no one will go out with her. right?"
+        },
+        {
+            "source": "JOEY",
+            "target": "MICHAEL",
+            "dialog": "Does this conversation have a purpose?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "You got him involved?"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "CAMERON",
+            "dialog": "Like we had a choice?  Besides -- when you let the enemy think he's orchestrating the battle, you're in a position of power. We let him pretend he's calling the shots, and while he's busy setting up the plan, you have time to woo Bianca."
+        },
+        {
+            "source": "CAMERON",
+            "target": "MICHAEL",
+            "dialog": "You're one brilliant guy"
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "So he has this huge raging fit about Sarah Lawrence and insists that I go to his male-dominated, puking frat boy, number one golf team school. I have no say at all."
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "William would never have gone to a state school."
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "William didn't even go to high school"
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "That's never been proven"
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "(continuing) I appreciate your efforts toward a speedy death, but I'm consuming. (pointing at her food) Do you mind?"
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "Does it matter?"
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "If I was Bianca, it would be, \"Any school you want, precious.  Don't forget your tiara.\""
+        },
+        {
+            "source": "MANDELLA",
+            "target": "KAT",
+            "dialog": "Janice Parker told me he was a roadie for Marilyn Manson."
+        },
+        {
+            "source": "KAT",
+            "target": "MANDELLA",
+            "dialog": "Janice Parker is an idiot"
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "PATRICK",
+            "dialog": "(looking at chart) I don't understand, Patrick.  You haven't done anything asinine this week. Are you not feeling well?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "MISS PERKY",
+            "dialog": "Touch of the flu."
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "PATRICK",
+            "dialog": "I'm at a loss, then.  What should we talk about? Your year of absence?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "MISS PERKY",
+            "dialog": "How 'bout your sex life?"
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "PATRICK",
+            "dialog": "Why don't we discuss your driving need to be a hemorrhoid?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "MISS PERKY",
+            "dialog": "What's to discuss?"
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "PATRICK",
+            "dialog": "You weren't abused, you aren't stupid, and as far as I can tell, you're only slightly psychotic -- so why is it that you're such a fuck-up?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "MISS PERKY",
+            "dialog": "Well, you know -- there's the prestige of the job title... and the benefits package is pretty good..."
+        },
+        {
+            "source": "MISS PERKY",
+            "target": "PATRICK",
+            "dialog": "Fine.  Go do something repugnant and give us something to talk about next week."
+        },
+        {
+            "source": "MANDELLA",
+            "target": "TREVOR",
+            "dialog": "Look, it's really easy."
+        },
+        {
+            "source": "TREVOR",
+            "target": "MANDELLA",
+            "dialog": "You're a freedom fighter. Be proud, sister."
+        },
+        {
+            "source": "MANDELLA",
+            "target": "TREVOR",
+            "dialog": "(rotely) It's Mandella with two L's.  I am not related to Nelson Mandela.  I am not a political figure.  I do not live in South Africa.  My parents just spent a few too many acid trips thinking they were revolutionaries."
+        },
+        {
+            "source": "TREVOR",
+            "target": "MANDELLA",
+            "dialog": "But you freed our people"
+        },
+        {
+            "source": "MANDELLA",
+            "target": "BIANCA",
+            "dialog": "Your \"people\" are white, suburban high school boys who smoke too much hemp.  I have not freed you, Trevor. (grabbing his arm dramatically) Only you can free yourself."
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "C'esc ma tete. This is my head"
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "Right.  See?  You're ready for the quiz."
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "I don't want to know how to say that though.  I want to know useful things. Like where the good stores are.  How much does champagne cost?  Stuff like Chat.  I have never in my life had to point out my head to someone."
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "That's because it's such a nice one."
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "(continuing) How is our little Find the Wench A Date plan progressing?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "Well, there's someone I think might be --"
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "Show me"
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "Give me a sign when he walks by.  And don't point."
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "There."
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "Where?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "I guess he didn't see me (calling after Patrick)"
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "My God, he's repulsive. He's so perfect!"
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "Yeah"
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "What do you think?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "Two legs, nice rack..."
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "Yeah, whatever.  I want you to go out with her."
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "Sure, Sparky.  I'll get right on it."
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "You just said"
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "You need money to take a girl out"
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "But you'd go out with her if you had the cake?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "(sarcastic) Yeah, I'd take her to Europe if I had the plane."
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "You got it, Verona.  I pick up the tab, you do the honors."
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "You're gonna pay me to take out some girl?"
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "I can't date her sister until that one gets a boyfriend.  And that's the catch. She doesn't want a boyfriend."
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "I can't take a girl like that out on twenty bucks."
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "(continuing) Take it or leave it.  This isn't a negotiation."
+        },
+        {
+            "source": "PATRICK",
+            "target": "MR. CHAPIN",
+            "dialog": "Fifty, and you've got your man."
+        },
+        {
+            "source": "MR. CHAPIN",
+            "target": "PATRICK",
+            "dialog": "(proudly) Good run, Stratford."
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "(continuing) I mean Wo-man.  How ya doin'?"
+        },
+        {
+            "source": "KAT",
+            "target": "PATRICK",
+            "dialog": "(smiles brightly) Sweating like a pig, actually.  And yourself?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "There's a way to get a guy's attention."
+        },
+        {
+            "source": "KAT",
+            "target": "PATRICK",
+            "dialog": "(continuing) Obviously, I've struck your fancy. So, you see, it worked.  The world makes sense again."
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "Pick you up Friday, then"
+        },
+        {
+            "source": "KAT",
+            "target": "PATRICK",
+            "dialog": "Oh, right.  Friday."
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "The night I take you to places you've never been before.  And back."
+        },
+        {
+            "source": "KAT",
+            "target": "PATRICK",
+            "dialog": "Like where?  The 7-Eleven on Burnside? Do you even know my name, screwboy?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "I know a lot more than that"
+        },
+        {
+            "source": "KAT",
+            "target": "PATRICK",
+            "dialog": "Doubtful.  Very doubtful."
+        },
+        {
+            "source": "PATRICK",
+            "target": "SCURVY",
+            "dialog": "(calling after her) You're no bargain either, sweetheart."
+        },
+        {
+            "source": "SCURVY",
+            "target": "MICHAEL",
+            "dialog": "So I guess the Jeep won't be getting a new Blaupunkt."
+        },
+        {
+            "source": "MICHAEL",
+            "target": "BIANCA",
+            "dialog": "He took the bait."
+        },
+        {
+            "source": "BIANCA",
+            "target": "KAT",
+            "dialog": "Have you ever considered a new look? I mean, seriously, you could have some potential buried under all this hostility."
+        },
+        {
+            "source": "KAT",
+            "target": "BIANCA",
+            "dialog": "I have the potential to smack the crap out of you if you don't get out of my way."
+        },
+        {
+            "source": "BIANCA",
+            "target": "KAT",
+            "dialog": "Can you at least start wearing a bra?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "(continuing) You hate me don't you?"
+        },
+        {
+            "source": "KAT",
+            "target": "PATRICK",
+            "dialog": "I don't really think you warrant that strong an emotion."
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "Then say you'll spend Dollar Night at the track with me."
+        },
+        {
+            "source": "KAT",
+            "target": "PATRICK",
+            "dialog": "And why would I do that?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "Come on -- the ponies, the flat beer, you with money in your eyes, me with my hand on your ass..."
+        },
+        {
+            "source": "KAT",
+            "target": "PATRICK",
+            "dialog": "You -- covered in my vomit."
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "Nice ride. Vintage fenders."
+        },
+        {
+            "source": "KAT",
+            "target": "PATRICK",
+            "dialog": "Are you following me?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "I was in the laundromat. I saw your car. Thought I'd say hi."
+        },
+        {
+            "source": "KAT",
+            "target": "PATRICK",
+            "dialog": "Hi"
+        },
+        {
+            "source": "PATRICK",
+            "target": "KAT",
+            "dialog": "You're not a big talker, are you?"
+        },
+        {
+            "source": "KAT",
+            "target": "JOEY",
+            "dialog": "(continuing) Hey -- do you mind?"
+        },
+        {
+            "source": "WALTER",
+            "target": "KAT",
+            "dialog": "My insurance does not cover PMS"
+        },
+        {
+            "source": "KAT",
+            "target": "WALTER",
+            "dialog": "Then tell them I had a seizure."
+        },
+        {
+            "source": "WALTER",
+            "target": "KAT",
+            "dialog": "Is this about Sarah Lawrence? You punishing me?"
+        },
+        {
+            "source": "KAT",
+            "target": "WALTER",
+            "dialog": "I thought you were punishing me."
+        },
+        {
+            "source": "WALTER",
+            "target": "KAT",
+            "dialog": "Why can't we agree on this?"
+        },
+        {
+            "source": "KAT",
+            "target": "WALTER",
+            "dialog": "Because you're making decisions for me."
+        },
+        {
+            "source": "WALTER",
+            "target": "KAT",
+            "dialog": "As a parent, that's my right"
+        },
+        {
+            "source": "KAT",
+            "target": "WALTER",
+            "dialog": "So what I want doesn't matter?"
+        },
+        {
+            "source": "WALTER",
+            "target": "KAT",
+            "dialog": "You're eighteen.  You don't know what you want.  You won't know until you're forty-five and you don't have it."
+        },
+        {
+            "source": "KAT",
+            "target": "WALTER",
+            "dialog": "(emphatic) I want to go to an East Coast school! I want you to trust me to make my own choices.  I want --"
+        },
+        {
+            "source": "WALTER",
+            "target": "KAT",
+            "dialog": "Christ!  I want a night to go by that I'm not staring a contraction in the face."
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "When I shell out fifty, I expect results."
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "I'm on it"
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "Watching the bitch trash my car doesn't count as a date."
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "I got her under control. She just acts crazed in public to keep up the image."
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "Let me put it to you this way, if you don't get any action, I don't get any action.  So get your ass on hers by the end of the week."
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "I just upped my price"
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "(turning) What?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "A hundred bucks a date."
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "Forget it."
+        },
+        {
+            "source": "PATRICK",
+            "target": "JOEY",
+            "dialog": "Forget her sister, then."
+        },
+        {
+            "source": "JOEY",
+            "target": "PATRICK",
+            "dialog": "You better hope you're as smooth as you think you are, Verona."
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "La copine et I 'ami?  La diferance?"
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "A \"copine\" is someone you can count on. An \"ami\" is someone who makes promises he can't keep."
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "You got something on your mind?"
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "I counted on you to help my cause. You and that thug are obviously failing. Aren't we ever going on our date?"
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "You have my word.  As a gentleman"
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "You're sweet."
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "(appreciative) How do you get your hair to look like that?"
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "Eber's Deep Conditioner every two days. And I never, ever use a blowdryer without the diffuser attachment."
+        },
+        {
+            "source": "CAMERON",
+            "target": "BIANCA",
+            "dialog": "You know, I read an article about that."
+        },
+        {
+            "source": "BIANCA",
+            "target": "CAMERON",
+            "dialog": "You did?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "MICHAEL",
+            "dialog": "(without turning around) Say it"
+        },
+        {
+            "source": "MICHAEL",
+            "target": "PATRICK",
+            "dialog": "(clearing his throat) What?"
+        },
+        {
+            "source": "PATRICK",
+            "target": "MICHAEL",
+            "dialog": "Ask my attorney."
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                {
+                    "id": "RIDER",
+                    "group": 1
+                },
+                {
+                    "id": "KAT",
+                    "group": 2
+                }
+            ],
+            "links": [
+                {
+                    "source": "KAT",
+                    "target": "RIDER",
+                    "value": 1,
+                    "dialogs": [
+                        "Hey -- sorry."
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "BIANCA",
+                    "group": 2
+                },
+                {
+                    "id": "CHASTITY",
+                    "group": 1
+                },
+                {
+                    "id": "BOY",
+                    "group": 1
+                },
+                {
+                    "id": "GIRL",
+                    "group": 1
+                },
+                {
+                    "id": "MISS PERKY",
+                    "group": 6
+                },
+                {
+                    "id": "CAMERON",
+                    "group": 6
+                },
+                {
+                    "id": "PATRICK",
+                    "group": 2
+                },
+                {
+                    "id": "MICHAEL",
+                    "group": 7
+                }
+            ],
+            "links": [
+                {
+                    "source": "BIANCA",
+                    "target": "CHASTITY",
+                    "value": 2,
+                    "dialogs": [
+                        "Did you change your hair?",
+                        "No."
+                    ]
+                },
+                {
+                    "source": "BIANCA",
+                    "target": "BOY",
+                    "value": 1,
+                    "dialogs": [
+                        "You might wanna think about it"
+                    ]
+                },
+                {
+                    "source": "BOY",
+                    "target": "GIRL",
+                    "value": 1,
+                    "dialogs": [
+                        "(adoring) Hey, Bianca."
+                    ]
+                },
+                {
+                    "source": "GIRL",
+                    "target": "MISS PERKY",
+                    "value": 1,
+                    "dialogs": [
+                        "Awesome shoes."
+                    ]
+                },
+                {
+                    "source": "CAMERON",
+                    "target": "MISS PERKY",
+                    "value": 2,
+                    "dialogs": [
+                        "(continuing) Any questions?",
+                        "I don't think so, ma'am"
+                    ]
+                },
+                {
+                    "source": "MISS PERKY",
+                    "target": "PATRICK",
+                    "value": 4,
+                    "dialogs": [
+                        "(continuing) Patrick Verona.  I see we're making our visits a weekly ritual.",
+                        "I missed you.",
+                        "It says here you exposed yourself to a group of freshmen girls.",
+                        "It was a bratwurst.  I was eating lunch."
+                    ]
+                },
+                {
+                    "source": "MICHAEL",
+                    "target": "MISS PERKY",
+                    "value": 1,
+                    "dialogs": [
+                        "With the teeth of your zipper?"
+                    ]
+                },
+                {
+                    "source": "CAMERON",
+                    "target": "MICHAEL",
+                    "value": 11,
+                    "dialogs": [
+                        "You the new guy?",
+                        "So they tell me...",
+                        "(continuing) So -- which Dakota you from?",
+                        "North, actually.  How'd you   ?",
+                        "I was kidding. People actually live there?",
+                        "Yeah.  A couple.  We're outnumbered by the cows, though.",
+                        "How many people were in your old school?",
+                        "Thirty-two.",
+                        "Get out!",
+                        "How many people go here?",
+                        "Couple thousand. Most of them evil"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "MICHAEL",
+                    "group": 7
+                },
+                {
+                    "id": "CAMERON",
+                    "group": 2
+                },
+                {
+                    "id": "DEREK",
+                    "group": 1
+                }
+            ],
+            "links": [
+                {
+                    "source": "CAMERON",
+                    "target": "MICHAEL",
+                    "value": 2,
+                    "dialogs": [
+                        "(continuing) Those 're your cowboys.",
+                        "That I'm used to."
+                    ]
+                },
+                {
+                    "source": "DEREK",
+                    "target": "MICHAEL",
+                    "value": 1,
+                    "dialogs": [
+                        "(continuing) Derek - save some for after lunch, bub?"
+                    ]
+                },
+                {
+                    "source": "CAMERON",
+                    "target": "DEREK",
+                    "value": 2,
+                    "dialogs": [
+                        "(very stoned) Michael, my brother, peace",
+                        "So where do you fit in all this?"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "MICHAEL",
+                    "group": 5
+                },
+                {
+                    "id": "CAMERON",
+                    "group": 3
+                },
+                {
+                    "id": "MRS. BLAISE",
+                    "group": 3
+                },
+                {
+                    "id": "KAT",
+                    "group": 5
+                },
+                {
+                    "id": "JOEY",
+                    "group": 1
+                },
+                {
+                    "id": "PATRICK",
+                    "group": 1
+                }
+            ],
+            "links": [
+                {
+                    "source": "CAMERON",
+                    "target": "MICHAEL",
+                    "value": 6,
+                    "dialogs": [
+                        "(continuing) are fixing my Saab.  Yuppie greed is back, my friend.",
+                        "That girl -- I --",
+                        "You burn, you pine, you perish?",
+                        "Who is she?",
+                        "Bianca Stratford.  Sophomore. Don't even think about it",
+                        "Why not?"
+                    ]
+                },
+                {
+                    "source": "MICHAEL",
+                    "target": "MRS. BLAISE",
+                    "value": 1,
+                    "dialogs": [
+                        "I could start with your haircut, but it doesn't matter.  She's not allowed to date until her older sister does.  And that's an impossibility."
+                    ]
+                },
+                {
+                    "source": "KAT",
+                    "target": "MRS. BLAISE",
+                    "value": 4,
+                    "dialogs": [
+                        "Well, then.  Oh, yes.  I guess that does it for our analysis of The Old Man and the Sea.  Any other comments? (with dread) Kat?",
+                        "Why didn't we just read the Hardy Boys?",
+                        "I'm sorry?",
+                        "That's enough, Mr. Dorsey."
+                    ]
+                },
+                {
+                    "source": "JOEY",
+                    "target": "KAT",
+                    "value": 1,
+                    "dialogs": [
+                        "(continuing) Frankly, I'm baffled as to why we still revere Hemingway.  He was an abusive, alcoholic misogynist who had a lot of cats."
+                    ]
+                },
+                {
+                    "source": "JOEY",
+                    "target": "MRS. BLAISE",
+                    "value": 1,
+                    "dialogs": [
+                        "As opposed to a bitter self-righteous hag who has no friends?"
+                    ]
+                },
+                {
+                    "source": "KAT",
+                    "target": "PATRICK",
+                    "value": 2,
+                    "dialogs": [
+                        "(continuing) What about Colette?  Charlotte Bronte? Simone de Beauvoir?",
+                        "Mother Goose?"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "MISS PERKY",
+                    "group": 5
+                },
+                {
+                    "id": "KAT",
+                    "group": 4
+                }
+            ],
+            "links": [
+                {
+                    "source": "KAT",
+                    "target": "MISS PERKY",
+                    "value": 8,
+                    "dialogs": [
+                        "Katarina Stratford.  My, my.  You've been terrorizing Ms. Blaise again.",
+                        "Expressing my opinion is not a terrorist action.",
+                        "Well, yes, compared to your other choices of expression this year, today's events are quite mild.  By the way, Bobby Rictor's gonad retrieval operation went quite well, in case you're interested.",
+                        "I still maintain that he kicked himself in the balls.  I was merely a spectator.",
+                        "The point is Kat -- people perceive you as somewhat ...",
+                        "Tempestuous?",
+                        "(continuing) You might want to work on that",
+                        "As always, thank you for your excellent guidance."
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "TEACHER",
+                    "group": 5
+                },
+                {
+                    "id": "BIANCA",
+                    "group": 1
+                },
+                {
+                    "id": "MANDELLA",
+                    "group": 11
+                },
+                {
+                    "id": "MANDELIA",
+                    "group": 1
+                },
+                {
+                    "id": "KAT",
+                    "group": 11
+                },
+                {
+                    "id": "COHORT",
+                    "group": 1
+                },
+                {
+                    "id": "JOEY",
+                    "group": 4
+                },
+                {
+                    "id": "CAMERON",
+                    "group": 6
+                },
+                {
+                    "id": "MICHAEL",
+                    "group": 7
+                }
+            ],
+            "links": [
+                {
+                    "source": "BIANCA",
+                    "target": "TEACHER",
+                    "value": 2,
+                    "dialogs": [
+                        "(continuing) Ms. Stratford, do you care to comment on what you've read so far?",
+                        "Not really."
+                    ]
+                },
+                {
+                    "source": "MANDELLA",
+                    "target": "TEACHER",
+                    "value": 3,
+                    "dialogs": [
+                        "Mandella -- since you're assisting us, you might as well comment.  I'm assuming you read the assignment.",
+                        "Uh, yeah, I read it all",
+                        "(disbelieving) You've read every play by William Shakespeare?"
+                    ]
+                },
+                {
+                    "source": "MANDELIA",
+                    "target": "TEACHER",
+                    "value": 2,
+                    "dialogs": [
+                        "The whole play^",
+                        "The whole folio.  All the plays."
+                    ]
+                },
+                {
+                    "source": "KAT",
+                    "target": "MANDELLA",
+                    "value": 15,
+                    "dialogs": [
+                        "Haven't you?",
+                        "The fact that you're cutting gym so you can T.A. Sophomore English just to hear his name, is a little without in itself if you ask me.",
+                        "Who's that?",
+                        "Patrick Verona   Random skid.",
+                        "That's Pat Verona? The one who was gone for a year? I heard he was doing porn movies.",
+                        "I'm sure he's completely incapable of doing anything that interesting.",
+                        "He always look so",
+                        "(continuing) Mandella, eat.  Starving yourself is a very slow way to die.",
+                        "Just a little.",
+                        "What's this?",
+                        "An attempted slit.",
+                        "I realize that the men of this fine institution are severely lacking, but killing yourself so you can be with William Shakespeare is beyond the scope of normal teenage obsessions.  You're venturing far past daytime talk show fodder and entering the world of those who need very expensive therapy.",
+                        "But imagine the things he'd say during sex.",
+                        "The people at this school are so incredibly foul.",
+                        "That's a charming new development"
+                    ]
+                },
+                {
+                    "source": "COHORT",
+                    "target": "KAT",
+                    "value": 1,
+                    "dialogs": [
+                        "Okay, say you do it.  You kill yourself, you end up in wherever you end up and he's there.  Do you really think he's gonna wanna dace a ninety pound compulsive who failed volleyball?"
+                    ]
+                },
+                {
+                    "source": "COHORT",
+                    "target": "JOEY",
+                    "value": 1,
+                    "dialogs": [
+                        "Virgin alert."
+                    ]
+                },
+                {
+                    "source": "JOEY",
+                    "target": "MANDELLA",
+                    "value": 3,
+                    "dialogs": [
+                        "Lookin' good, ladies.",
+                        "You could always go with me.  I'm sure William has some friends.",
+                        "Need a ride, ladies?"
+                    ]
+                },
+                {
+                    "source": "CAMERON",
+                    "target": "MANDELLA",
+                    "value": 1,
+                    "dialogs": [
+                        "Tragic."
+                    ]
+                },
+                {
+                    "source": "CAMERON",
+                    "target": "MICHAEL",
+                    "value": 11,
+                    "dialogs": [
+                        "Why do girls like that always like guys like that?",
+                        "Because they're bred to.  Their mothers liked guys like that, and their grandmothers before them. Their gene pool is rarely diluted.",
+                        "He always have that shit-eating grin?",
+                        "(continuing) You know French?",
+                        "Sure do ... my Mom's from Canada",
+                        "Guess who just signed up for a tutor?",
+                        "You mean I'd get a chance to talk to her?",
+                        "You all right?",
+                        "Yeah, just a minor encounter with the shrew.",
+                        "That's her?  Bianca's sister?",
+                        "The mewling, rampalian wretch herself."
+                    ]
+                },
+                {
+                    "source": "JOEY",
+                    "target": "MICHAEL",
+                    "value": 1,
+                    "dialogs": [
+                        "You could consecrate with her, my friend."
+                    ]
+                },
+                {
+                    "source": "JOEY",
+                    "target": "KAT",
+                    "value": 3,
+                    "dialogs": [
+                        "(re her dress) The vintage look is over, Kat. Haven't you been reading your Sassy?",
+                        "Yeah, and I noticed the only part of you featured in your big Kmart spread was your elbow.  Tough break.",
+                        "(practically spitting) They're running the rest of me next month."
+                    ]
+                },
+                {
+                    "source": "CAMERON",
+                    "target": "KAT",
+                    "value": 1,
+                    "dialogs": [
+                        "(yelling) Remove head from sphincter!  Then pedal!"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "KAT",
+                    "group": 9
+                },
+                {
+                    "id": "SHARON",
+                    "group": 4
+                },
+                {
+                    "id": "WALTER",
+                    "group": 14
+                },
+                {
+                    "id": "BIANCA",
+                    "group": 6
+                }
+            ],
+            "links": [
+                {
+                    "source": "KAT",
+                    "target": "SHARON",
+                    "value": 3,
+                    "dialogs": [
+                        "\"Undulating with desire, Adrienne removes her crimson cape, revealing her creamy --\"",
+                        "I guess I got in",
+                        "Ask Bianca who drove her home"
+                    ]
+                },
+                {
+                    "source": "SHARON",
+                    "target": "WALTER",
+                    "value": 6,
+                    "dialogs": [
+                        "In the microwave.",
+                        "What's a synonym for throbbing?",
+                        "Swollen...turgid.",
+                        "(continuing) Jesus!  Can a man even grab a sandwich before you women start dilating?",
+                        "Tumescent!",
+                        "(to Sharon; as he leaves) You're not helping."
+                    ]
+                },
+                {
+                    "source": "KAT",
+                    "target": "WALTER",
+                    "value": 8,
+                    "dialogs": [
+                        "(to Kat) Make anyone cry today?",
+                        "Hello, precious.",
+                        "How touching.",
+                        "What's this?  It says Sarah Lawrence?",
+                        "Sarah Lawrence is on the other side of the country.",
+                        "I know.",
+                        "I thought we decided you were going to school here.  At U of 0.",
+                        "This from someone whose diary is devoted to favorite grooming tips?"
+                    ]
+                },
+                {
+                    "source": "BIANCA",
+                    "target": "KAT",
+                    "value": 4,
+                    "dialogs": [
+                        "(continuing) Where've you been?",
+                        "You decided.",
+                        "Is there even a question that we want her to stay?",
+                        "But it's not fair -- she's a mutant, Daddy!"
+                    ]
+                },
+                {
+                    "source": "BIANCA",
+                    "target": "WALTER",
+                    "value": 8,
+                    "dialogs": [
+                        "(eyeing Walter) Nowhere... Hi, Daddy.",
+                        "(to Bianca; upset) Who drove you home?",
+                        "Now don't get upset. Daddy, but there's this boy... and I think he might ask...",
+                        "No! You're not dating until your sister starts dating.  End of discussion.",
+                        "What if she never starts dating?",
+                        "Then neither will you.  And I'll get to sleep at night.",
+                        "This is why you're not dating until your sister does.",
+                        "But she doesn't want to date."
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "BIANCA",
+                    "group": 6
+                },
+                {
+                    "id": "CAMERON",
+                    "group": 8
+                }
+            ],
+            "links": [
+                {
+                    "source": "BIANCA",
+                    "target": "CAMERON",
+                    "value": 12,
+                    "dialogs": [
+                        "Can we make this quick?  Roxanne Korrine and Andrew Barrett are having an incredibly horrendous public break- up on the quad.  Again.",
+                        "(looking down) Okay... then how 'bout we try out some French cuisine.  Saturday?  Night?",
+                        "You're asking me out.  That's so cute. What's your name again?",
+                        "(embarrassed) Forget it.",
+                        "No, no, it's my fault -- we didn't have a proper introduction ---",
+                        "Cameron.",
+                        "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does.",
+                        "Why?",
+                        "Unsolved mystery.  She used to be really popular when she started high school, then it was just like she got sick of it or something.",
+                        "That's a shame.",
+                        "Gosh, if only we could find Kat a boyfriend...",
+                        "Let me see what I can do."
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "MICHAEL",
+                    "group": 10
+                },
+                {
+                    "id": "CAMERON",
+                    "group": 9
+                }
+            ],
+            "links": [
+                {
+                    "source": "CAMERON",
+                    "target": "MICHAEL",
+                    "value": 19,
+                    "dialogs": [
+                        "You're in school for one day and you ask out the most beautiful girl?  Do you have no concept of the high school social code?",
+                        "I teach her French, get to know her, dazzle her with charm and she falls in love with me.",
+                        "Unlikely, but even so, she still can't go out with you.  So what's the point?",
+                        "What about him?",
+                        "(confused) You wanna go out with him?",
+                        "(impatient) No - he could wrangle with the sister.",
+                        "What makes you think he'll do it?",
+                        "He seems like he thrives on danger",
+                        "No kidding.  He's a criminal.  I heard he lit a state trooper on fire.  He just got out of Alcatraz...",
+                        "They always let felons sit in on Honors Biology?",
+                        "I'm serious, man, he's whacked.  He sold his own liver on the black market so he could buy new speakers.",
+                        "Forget his reputation.  Do you think we've got a plan or not?",
+                        "Did she actually say she'd go out with you?",
+                        "That's what I just said",
+                        "You know, if you do go out with Bianca, you'd be set.  You'd outrank everyone. Strictly A-list.  With me by your side.",
+                        "I thought you hated those people.",
+                        "Hey -- I've gotta have a few clients when I get to Wall Street.",
+                        "So now all we gotta do is talk to him.",
+                        "I'll let you handle that."
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "PEPE",
+                    "group": 1
+                },
+                {
+                    "id": "CAMERON",
+                    "group": 2
+                }
+            ],
+            "links": [
+                {
+                    "source": "CAMERON",
+                    "target": "PEPE",
+                    "value": 1,
+                    "dialogs": [
+                        "Some people like the Colombian, but it all depends on your acidity preference. Me?  I prefer East African and Indonesian.  You start the day with a Sumatra Boengie or maybe and Ethiopian Sidamo in your cup, you're that much farther ahead than someone drinkin' Cosia Rican or Kona -- you know what I mean?"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "MICHAEL",
+                    "group": 9
+                },
+                {
+                    "id": "JOEY",
+                    "group": 4
+                }
+            ],
+            "links": [
+                {
+                    "source": "JOEY",
+                    "target": "MICHAEL",
+                    "value": 8,
+                    "dialogs": [
+                        "Hey.",
+                        "Are you lost?",
+                        "Nope - just came by to chat",
+                        "We don't chat.",
+                        "Well, actually, I thought I'd run an idea by you.  You know, just to see if you're interested.",
+                        "We're not.",
+                        "(continuing) But she can't go out with you because her sister is this insane head case and no one will go out with her. right?",
+                        "Does this conversation have a purpose?"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "CAMERON",
+                    "group": 2
+                },
+                {
+                    "id": "MICHAEL",
+                    "group": 1
+                }
+            ],
+            "links": [
+                {
+                    "source": "CAMERON",
+                    "target": "MICHAEL",
+                    "value": 3,
+                    "dialogs": [
+                        "You got him involved?",
+                        "Like we had a choice?  Besides -- when you let the enemy think he's orchestrating the battle, you're in a position of power. We let him pretend he's calling the shots, and while he's busy setting up the plan, you have time to woo Bianca.",
+                        "You're one brilliant guy"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "KAT",
+                    "group": 6
+                },
+                {
+                    "id": "MANDELLA",
+                    "group": 4
+                }
+            ],
+            "links": [
+                {
+                    "source": "KAT",
+                    "target": "MANDELLA",
+                    "value": 9,
+                    "dialogs": [
+                        "So he has this huge raging fit about Sarah Lawrence and insists that I go to his male-dominated, puking frat boy, number one golf team school. I have no say at all.",
+                        "William would never have gone to a state school.",
+                        "William didn't even go to high school",
+                        "That's never been proven",
+                        "(continuing) I appreciate your efforts toward a speedy death, but I'm consuming. (pointing at her food) Do you mind?",
+                        "Does it matter?",
+                        "If I was Bianca, it would be, \"Any school you want, precious.  Don't forget your tiara.\"",
+                        "Janice Parker told me he was a roadie for Marilyn Manson.",
+                        "Janice Parker is an idiot"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "MISS PERKY",
+                    "group": 5
+                },
+                {
+                    "id": "PATRICK",
+                    "group": 4
+                }
+            ],
+            "links": [
+                {
+                    "source": "MISS PERKY",
+                    "target": "PATRICK",
+                    "value": 9,
+                    "dialogs": [
+                        "(looking at chart) I don't understand, Patrick.  You haven't done anything asinine this week. Are you not feeling well?",
+                        "Touch of the flu.",
+                        "I'm at a loss, then.  What should we talk about? Your year of absence?",
+                        "How 'bout your sex life?",
+                        "Why don't we discuss your driving need to be a hemorrhoid?",
+                        "What's to discuss?",
+                        "You weren't abused, you aren't stupid, and as far as I can tell, you're only slightly psychotic -- so why is it that you're such a fuck-up?",
+                        "Well, you know -- there's the prestige of the job title... and the benefits package is pretty good...",
+                        "Fine.  Go do something repugnant and give us something to talk about next week."
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "MANDELLA",
+                    "group": 3
+                },
+                {
+                    "id": "TREVOR",
+                    "group": 2
+                },
+                {
+                    "id": "BIANCA",
+                    "group": 5
+                },
+                {
+                    "id": "CAMERON",
+                    "group": 3
+                }
+            ],
+            "links": [
+                {
+                    "source": "MANDELLA",
+                    "target": "TREVOR",
+                    "value": 4,
+                    "dialogs": [
+                        "Look, it's really easy.",
+                        "You're a freedom fighter. Be proud, sister.",
+                        "(rotely) It's Mandella with two L's.  I am not related to Nelson Mandela.  I am not a political figure.  I do not live in South Africa.  My parents just spent a few too many acid trips thinking they were revolutionaries.",
+                        "But you freed our people"
+                    ]
+                },
+                {
+                    "source": "BIANCA",
+                    "target": "MANDELLA",
+                    "value": 1,
+                    "dialogs": [
+                        "Your \"people\" are white, suburban high school boys who smoke too much hemp.  I have not freed you, Trevor. (grabbing his arm dramatically) Only you can free yourself."
+                    ]
+                },
+                {
+                    "source": "BIANCA",
+                    "target": "CAMERON",
+                    "value": 7,
+                    "dialogs": [
+                        "C'esc ma tete. This is my head",
+                        "Right.  See?  You're ready for the quiz.",
+                        "I don't want to know how to say that though.  I want to know useful things. Like where the good stores are.  How much does champagne cost?  Stuff like Chat.  I have never in my life had to point out my head to someone.",
+                        "That's because it's such a nice one.",
+                        "(continuing) How is our little Find the Wench A Date plan progressing?",
+                        "Well, there's someone I think might be --",
+                        "Show me"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "BIANCA",
+                    "group": 3
+                },
+                {
+                    "id": "CAMERON",
+                    "group": 2
+                }
+            ],
+            "links": [
+                {
+                    "source": "BIANCA",
+                    "target": "CAMERON",
+                    "value": 5,
+                    "dialogs": [
+                        "Give me a sign when he walks by.  And don't point.",
+                        "There.",
+                        "Where?",
+                        "I guess he didn't see me (calling after Patrick)",
+                        "My God, he's repulsive. He's so perfect!"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "PATRICK",
+                    "group": 17
+                },
+                {
+                    "id": "JOEY",
+                    "group": 8
+                },
+                {
+                    "id": "MR. CHAPIN",
+                    "group": 1
+                },
+                {
+                    "id": "KAT",
+                    "group": 7
+                },
+                {
+                    "id": "SCURVY",
+                    "group": 1
+                },
+                {
+                    "id": "MICHAEL",
+                    "group": 1
+                },
+                {
+                    "id": "BIANCA",
+                    "group": 2
+                }
+            ],
+            "links": [
+                {
+                    "source": "JOEY",
+                    "target": "PATRICK",
+                    "value": 14,
+                    "dialogs": [
+                        "Yeah",
+                        "What do you think?",
+                        "Two legs, nice rack...",
+                        "Yeah, whatever.  I want you to go out with her.",
+                        "Sure, Sparky.  I'll get right on it.",
+                        "You just said",
+                        "You need money to take a girl out",
+                        "But you'd go out with her if you had the cake?",
+                        "(sarcastic) Yeah, I'd take her to Europe if I had the plane.",
+                        "You got it, Verona.  I pick up the tab, you do the honors.",
+                        "You're gonna pay me to take out some girl?",
+                        "I can't date her sister until that one gets a boyfriend.  And that's the catch. She doesn't want a boyfriend.",
+                        "I can't take a girl like that out on twenty bucks.",
+                        "(continuing) Take it or leave it.  This isn't a negotiation."
+                    ]
+                },
+                {
+                    "source": "MR. CHAPIN",
+                    "target": "PATRICK",
+                    "value": 2,
+                    "dialogs": [
+                        "Fifty, and you've got your man.",
+                        "(proudly) Good run, Stratford."
+                    ]
+                },
+                {
+                    "source": "KAT",
+                    "target": "PATRICK",
+                    "value": 10,
+                    "dialogs": [
+                        "(continuing) I mean Wo-man.  How ya doin'?",
+                        "(smiles brightly) Sweating like a pig, actually.  And yourself?",
+                        "There's a way to get a guy's attention.",
+                        "(continuing) Obviously, I've struck your fancy. So, you see, it worked.  The world makes sense again.",
+                        "Pick you up Friday, then",
+                        "Oh, right.  Friday.",
+                        "The night I take you to places you've never been before.  And back.",
+                        "Like where?  The 7-Eleven on Burnside? Do you even know my name, screwboy?",
+                        "I know a lot more than that",
+                        "Doubtful.  Very doubtful."
+                    ]
+                },
+                {
+                    "source": "PATRICK",
+                    "target": "SCURVY",
+                    "value": 1,
+                    "dialogs": [
+                        "(calling after her) You're no bargain either, sweetheart."
+                    ]
+                },
+                {
+                    "source": "MICHAEL",
+                    "target": "SCURVY",
+                    "value": 1,
+                    "dialogs": [
+                        "So I guess the Jeep won't be getting a new Blaupunkt."
+                    ]
+                },
+                {
+                    "source": "BIANCA",
+                    "target": "MICHAEL",
+                    "value": 1,
+                    "dialogs": [
+                        "He took the bait."
+                    ]
+                },
+                {
+                    "source": "BIANCA",
+                    "target": "KAT",
+                    "value": 3,
+                    "dialogs": [
+                        "Have you ever considered a new look? I mean, seriously, you could have some potential buried under all this hostility.",
+                        "I have the potential to smack the crap out of you if you don't get out of my way.",
+                        "Can you at least start wearing a bra?"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "PATRICK",
+                    "group": 8
+                },
+                {
+                    "id": "KAT",
+                    "group": 7
+                },
+                {
+                    "id": "JOEY",
+                    "group": 2
+                }
+            ],
+            "links": [
+                {
+                    "source": "KAT",
+                    "target": "PATRICK",
+                    "value": 11,
+                    "dialogs": [
+                        "(continuing) You hate me don't you?",
+                        "I don't really think you warrant that strong an emotion.",
+                        "Then say you'll spend Dollar Night at the track with me.",
+                        "And why would I do that?",
+                        "Come on -- the ponies, the flat beer, you with money in your eyes, me with my hand on your ass...",
+                        "You -- covered in my vomit.",
+                        "Nice ride. Vintage fenders.",
+                        "Are you following me?",
+                        "I was in the laundromat. I saw your car. Thought I'd say hi.",
+                        "Hi",
+                        "You're not a big talker, are you?"
+                    ]
+                },
+                {
+                    "source": "JOEY",
+                    "target": "KAT",
+                    "value": 1,
+                    "dialogs": [
+                        "(continuing) Hey -- do you mind?"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "WALTER",
+                    "group": 6
+                },
+                {
+                    "id": "KAT",
+                    "group": 5
+                }
+            ],
+            "links": [
+                {
+                    "source": "KAT",
+                    "target": "WALTER",
+                    "value": 11,
+                    "dialogs": [
+                        "My insurance does not cover PMS",
+                        "Then tell them I had a seizure.",
+                        "Is this about Sarah Lawrence? You punishing me?",
+                        "I thought you were punishing me.",
+                        "Why can't we agree on this?",
+                        "Because you're making decisions for me.",
+                        "As a parent, that's my right",
+                        "So what I want doesn't matter?",
+                        "You're eighteen.  You don't know what you want.  You won't know until you're forty-five and you don't have it.",
+                        "(emphatic) I want to go to an East Coast school! I want you to trust me to make my own choices.  I want --",
+                        "Christ!  I want a night to go by that I'm not staring a contraction in the face."
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "JOEY",
+                    "group": 6
+                },
+                {
+                    "id": "PATRICK",
+                    "group": 5
+                }
+            ],
+            "links": [
+                {
+                    "source": "JOEY",
+                    "target": "PATRICK",
+                    "value": 11,
+                    "dialogs": [
+                        "When I shell out fifty, I expect results.",
+                        "I'm on it",
+                        "Watching the bitch trash my car doesn't count as a date.",
+                        "I got her under control. She just acts crazed in public to keep up the image.",
+                        "Let me put it to you this way, if you don't get any action, I don't get any action.  So get your ass on hers by the end of the week.",
+                        "I just upped my price",
+                        "(turning) What?",
+                        "A hundred bucks a date.",
+                        "Forget it.",
+                        "Forget her sister, then.",
+                        "You better hope you're as smooth as you think you are, Verona."
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "CAMERON",
+                    "group": 5
+                },
+                {
+                    "id": "BIANCA",
+                    "group": 5
+                }
+            ],
+            "links": [
+                {
+                    "source": "BIANCA",
+                    "target": "CAMERON",
+                    "value": 10,
+                    "dialogs": [
+                        "La copine et I 'ami?  La diferance?",
+                        "A \"copine\" is someone you can count on. An \"ami\" is someone who makes promises he can't keep.",
+                        "You got something on your mind?",
+                        "I counted on you to help my cause. You and that thug are obviously failing. Aren't we ever going on our date?",
+                        "You have my word.  As a gentleman",
+                        "You're sweet.",
+                        "(appreciative) How do you get your hair to look like that?",
+                        "Eber's Deep Conditioner every two days. And I never, ever use a blowdryer without the diffuser attachment.",
+                        "You know, I read an article about that.",
+                        "You did?"
+                    ]
+                }
+            ]
+        },
+        {
+            "nodes": [
+                {
+                    "id": "PATRICK",
+                    "group": 1
+                },
+                {
+                    "id": "MICHAEL",
+                    "group": 1
+                }
+            ],
+            "links": [
+                {
+                    "source": "MICHAEL",
+                    "target": "PATRICK",
+                    "value": 3,
+                    "dialogs": [
+                        "(without turning around) Say it",
+                        "(clearing his throat) What?",
+                        "Ask my attorney."
+                    ]
+                }
+            ]
+        }
+    ],
+    "all": {
+        "nodes": [
+            {
+                "id": "RIDER",
+                "group": 1
+            },
+            {
+                "id": "KAT",
+                "group": 56
+            },
+            {
+                "id": "BIANCA",
+                "group": 30
+            },
+            {
+                "id": "CHASTITY",
+                "group": 1
+            },
+            {
+                "id": "BOY",
+                "group": 1
+            },
+            {
+                "id": "GIRL",
+                "group": 1
+            },
+            {
+                "id": "MISS PERKY",
+                "group": 16
+            },
+            {
+                "id": "CAMERON",
+                "group": 48
+            },
+            {
+                "id": "PATRICK",
+                "group": 38
+            },
+            {
+                "id": "MICHAEL",
+                "group": 48
+            },
+            {
+                "id": "DEREK",
+                "group": 1
+            },
+            {
+                "id": "MRS. BLAISE",
+                "group": 3
+            },
+            {
+                "id": "JOEY",
+                "group": 25
+            },
+            {
+                "id": "TEACHER",
+                "group": 5
+            },
+            {
+                "id": "MANDELLA",
+                "group": 18
+            },
+            {
+                "id": "MANDELIA",
+                "group": 1
+            },
+            {
+                "id": "COHORT",
+                "group": 1
+            },
+            {
+                "id": "SHARON",
+                "group": 4
+            },
+            {
+                "id": "WALTER",
+                "group": 20
+            },
+            {
+                "id": "PEPE",
+                "group": 1
+            },
+            {
+                "id": "TREVOR",
+                "group": 2
+            },
+            {
+                "id": "MR. CHAPIN",
+                "group": 1
+            },
+            {
+                "id": "SCURVY",
+                "group": 1
+            }
+        ],
+        "links": [
+            {
+                "source": "KAT",
+                "target": "RIDER",
+                "value": 1,
+                "dialogs": [
+                    "Hey -- sorry."
+                ]
+            },
+            {
+                "source": "BIANCA",
+                "target": "CHASTITY",
+                "value": 2,
+                "dialogs": [
+                    "Did you change your hair?",
+                    "No."
+                ]
+            },
+            {
+                "source": "BIANCA",
+                "target": "BOY",
+                "value": 1,
+                "dialogs": [
+                    "You might wanna think about it"
+                ]
+            },
+            {
+                "source": "BOY",
+                "target": "GIRL",
+                "value": 1,
+                "dialogs": [
+                    "(adoring) Hey, Bianca."
+                ]
+            },
+            {
+                "source": "GIRL",
+                "target": "MISS PERKY",
+                "value": 1,
+                "dialogs": [
+                    "Awesome shoes."
+                ]
+            },
+            {
+                "source": "CAMERON",
+                "target": "MISS PERKY",
+                "value": 2,
+                "dialogs": [
+                    "(continuing) Any questions?",
+                    "I don't think so, ma'am"
+                ]
+            },
+            {
+                "source": "MISS PERKY",
+                "target": "PATRICK",
+                "value": 13,
+                "dialogs": [
+                    "(continuing) Patrick Verona.  I see we're making our visits a weekly ritual.",
+                    "I missed you.",
+                    "It says here you exposed yourself to a group of freshmen girls.",
+                    "It was a bratwurst.  I was eating lunch.",
+                    "(looking at chart) I don't understand, Patrick.  You haven't done anything asinine this week. Are you not feeling well?",
+                    "Touch of the flu.",
+                    "I'm at a loss, then.  What should we talk about? Your year of absence?",
+                    "How 'bout your sex life?",
+                    "Why don't we discuss your driving need to be a hemorrhoid?",
+                    "What's to discuss?",
+                    "You weren't abused, you aren't stupid, and as far as I can tell, you're only slightly psychotic -- so why is it that you're such a fuck-up?",
+                    "Well, you know -- there's the prestige of the job title... and the benefits package is pretty good...",
+                    "Fine.  Go do something repugnant and give us something to talk about next week."
+                ]
+            },
+            {
+                "source": "MICHAEL",
+                "target": "MISS PERKY",
+                "value": 1,
+                "dialogs": [
+                    "With the teeth of your zipper?"
+                ]
+            },
+            {
+                "source": "CAMERON",
+                "target": "MICHAEL",
+                "value": 52,
+                "dialogs": [
+                    "You the new guy?",
+                    "So they tell me...",
+                    "(continuing) So -- which Dakota you from?",
+                    "North, actually.  How'd you   ?",
+                    "I was kidding. People actually live there?",
+                    "Yeah.  A couple.  We're outnumbered by the cows, though.",
+                    "How many people were in your old school?",
+                    "Thirty-two.",
+                    "Get out!",
+                    "How many people go here?",
+                    "Couple thousand. Most of them evil",
+                    "(continuing) Those 're your cowboys.",
+                    "That I'm used to.",
+                    "(continuing) are fixing my Saab.  Yuppie greed is back, my friend.",
+                    "That girl -- I --",
+                    "You burn, you pine, you perish?",
+                    "Who is she?",
+                    "Bianca Stratford.  Sophomore. Don't even think about it",
+                    "Why not?",
+                    "Why do girls like that always like guys like that?",
+                    "Because they're bred to.  Their mothers liked guys like that, and their grandmothers before them. Their gene pool is rarely diluted.",
+                    "He always have that shit-eating grin?",
+                    "(continuing) You know French?",
+                    "Sure do ... my Mom's from Canada",
+                    "Guess who just signed up for a tutor?",
+                    "You mean I'd get a chance to talk to her?",
+                    "You all right?",
+                    "Yeah, just a minor encounter with the shrew.",
+                    "That's her?  Bianca's sister?",
+                    "The mewling, rampalian wretch herself.",
+                    "You're in school for one day and you ask out the most beautiful girl?  Do you have no concept of the high school social code?",
+                    "I teach her French, get to know her, dazzle her with charm and she falls in love with me.",
+                    "Unlikely, but even so, she still can't go out with you.  So what's the point?",
+                    "What about him?",
+                    "(confused) You wanna go out with him?",
+                    "(impatient) No - he could wrangle with the sister.",
+                    "What makes you think he'll do it?",
+                    "He seems like he thrives on danger",
+                    "No kidding.  He's a criminal.  I heard he lit a state trooper on fire.  He just got out of Alcatraz...",
+                    "They always let felons sit in on Honors Biology?",
+                    "I'm serious, man, he's whacked.  He sold his own liver on the black market so he could buy new speakers.",
+                    "Forget his reputation.  Do you think we've got a plan or not?",
+                    "Did she actually say she'd go out with you?",
+                    "That's what I just said",
+                    "You know, if you do go out with Bianca, you'd be set.  You'd outrank everyone. Strictly A-list.  With me by your side.",
+                    "I thought you hated those people.",
+                    "Hey -- I've gotta have a few clients when I get to Wall Street.",
+                    "So now all we gotta do is talk to him.",
+                    "I'll let you handle that.",
+                    "You got him involved?",
+                    "Like we had a choice?  Besides -- when you let the enemy think he's orchestrating the battle, you're in a position of power. We let him pretend he's calling the shots, and while he's busy setting up the plan, you have time to woo Bianca.",
+                    "You're one brilliant guy"
+                ]
+            },
+            {
+                "source": "DEREK",
+                "target": "MICHAEL",
+                "value": 1,
+                "dialogs": [
+                    "(continuing) Derek - save some for after lunch, bub?"
+                ]
+            },
+            {
+                "source": "CAMERON",
+                "target": "DEREK",
+                "value": 2,
+                "dialogs": [
+                    "(very stoned) Michael, my brother, peace",
+                    "So where do you fit in all this?"
+                ]
+            },
+            {
+                "source": "MICHAEL",
+                "target": "MRS. BLAISE",
+                "value": 1,
+                "dialogs": [
+                    "I could start with your haircut, but it doesn't matter.  She's not allowed to date until her older sister does.  And that's an impossibility."
+                ]
+            },
+            {
+                "source": "KAT",
+                "target": "MRS. BLAISE",
+                "value": 4,
+                "dialogs": [
+                    "Well, then.  Oh, yes.  I guess that does it for our analysis of The Old Man and the Sea.  Any other comments? (with dread) Kat?",
+                    "Why didn't we just read the Hardy Boys?",
+                    "I'm sorry?",
+                    "That's enough, Mr. Dorsey."
+                ]
+            },
+            {
+                "source": "JOEY",
+                "target": "KAT",
+                "value": 5,
+                "dialogs": [
+                    "(continuing) Frankly, I'm baffled as to why we still revere Hemingway.  He was an abusive, alcoholic misogynist who had a lot of cats.",
+                    "(re her dress) The vintage look is over, Kat. Haven't you been reading your Sassy?",
+                    "Yeah, and I noticed the only part of you featured in your big Kmart spread was your elbow.  Tough break.",
+                    "(practically spitting) They're running the rest of me next month.",
+                    "(continuing) Hey -- do you mind?"
+                ]
+            },
+            {
+                "source": "JOEY",
+                "target": "MRS. BLAISE",
+                "value": 1,
+                "dialogs": [
+                    "As opposed to a bitter self-righteous hag who has no friends?"
+                ]
+            },
+            {
+                "source": "KAT",
+                "target": "PATRICK",
+                "value": 23,
+                "dialogs": [
+                    "(continuing) What about Colette?  Charlotte Bronte? Simone de Beauvoir?",
+                    "Mother Goose?",
+                    "(continuing) I mean Wo-man.  How ya doin'?",
+                    "(smiles brightly) Sweating like a pig, actually.  And yourself?",
+                    "There's a way to get a guy's attention.",
+                    "(continuing) Obviously, I've struck your fancy. So, you see, it worked.  The world makes sense again.",
+                    "Pick you up Friday, then",
+                    "Oh, right.  Friday.",
+                    "The night I take you to places you've never been before.  And back.",
+                    "Like where?  The 7-Eleven on Burnside? Do you even know my name, screwboy?",
+                    "I know a lot more than that",
+                    "Doubtful.  Very doubtful.",
+                    "(continuing) You hate me don't you?",
+                    "I don't really think you warrant that strong an emotion.",
+                    "Then say you'll spend Dollar Night at the track with me.",
+                    "And why would I do that?",
+                    "Come on -- the ponies, the flat beer, you with money in your eyes, me with my hand on your ass...",
+                    "You -- covered in my vomit.",
+                    "Nice ride. Vintage fenders.",
+                    "Are you following me?",
+                    "I was in the laundromat. I saw your car. Thought I'd say hi.",
+                    "Hi",
+                    "You're not a big talker, are you?"
+                ]
+            },
+            {
+                "source": "KAT",
+                "target": "MISS PERKY",
+                "value": 8,
+                "dialogs": [
+                    "Katarina Stratford.  My, my.  You've been terrorizing Ms. Blaise again.",
+                    "Expressing my opinion is not a terrorist action.",
+                    "Well, yes, compared to your other choices of expression this year, today's events are quite mild.  By the way, Bobby Rictor's gonad retrieval operation went quite well, in case you're interested.",
+                    "I still maintain that he kicked himself in the balls.  I was merely a spectator.",
+                    "The point is Kat -- people perceive you as somewhat ...",
+                    "Tempestuous?",
+                    "(continuing) You might want to work on that",
+                    "As always, thank you for your excellent guidance."
+                ]
+            },
+            {
+                "source": "BIANCA",
+                "target": "TEACHER",
+                "value": 2,
+                "dialogs": [
+                    "(continuing) Ms. Stratford, do you care to comment on what you've read so far?",
+                    "Not really."
+                ]
+            },
+            {
+                "source": "MANDELLA",
+                "target": "TEACHER",
+                "value": 3,
+                "dialogs": [
+                    "Mandella -- since you're assisting us, you might as well comment.  I'm assuming you read the assignment.",
+                    "Uh, yeah, I read it all",
+                    "(disbelieving) You've read every play by William Shakespeare?"
+                ]
+            },
+            {
+                "source": "MANDELIA",
+                "target": "TEACHER",
+                "value": 2,
+                "dialogs": [
+                    "The whole play^",
+                    "The whole folio.  All the plays."
+                ]
+            },
+            {
+                "source": "KAT",
+                "target": "MANDELLA",
+                "value": 24,
+                "dialogs": [
+                    "Haven't you?",
+                    "The fact that you're cutting gym so you can T.A. Sophomore English just to hear his name, is a little without in itself if you ask me.",
+                    "Who's that?",
+                    "Patrick Verona   Random skid.",
+                    "That's Pat Verona? The one who was gone for a year? I heard he was doing porn movies.",
+                    "I'm sure he's completely incapable of doing anything that interesting.",
+                    "He always look so",
+                    "(continuing) Mandella, eat.  Starving yourself is a very slow way to die.",
+                    "Just a little.",
+                    "What's this?",
+                    "An attempted slit.",
+                    "I realize that the men of this fine institution are severely lacking, but killing yourself so you can be with William Shakespeare is beyond the scope of normal teenage obsessions.  You're venturing far past daytime talk show fodder and entering the world of those who need very expensive therapy.",
+                    "But imagine the things he'd say during sex.",
+                    "The people at this school are so incredibly foul.",
+                    "That's a charming new development",
+                    "So he has this huge raging fit about Sarah Lawrence and insists that I go to his male-dominated, puking frat boy, number one golf team school. I have no say at all.",
+                    "William would never have gone to a state school.",
+                    "William didn't even go to high school",
+                    "That's never been proven",
+                    "(continuing) I appreciate your efforts toward a speedy death, but I'm consuming. (pointing at her food) Do you mind?",
+                    "Does it matter?",
+                    "If I was Bianca, it would be, \"Any school you want, precious.  Don't forget your tiara.\"",
+                    "Janice Parker told me he was a roadie for Marilyn Manson.",
+                    "Janice Parker is an idiot"
+                ]
+            },
+            {
+                "source": "COHORT",
+                "target": "KAT",
+                "value": 1,
+                "dialogs": [
+                    "Okay, say you do it.  You kill yourself, you end up in wherever you end up and he's there.  Do you really think he's gonna wanna dace a ninety pound compulsive who failed volleyball?"
+                ]
+            },
+            {
+                "source": "COHORT",
+                "target": "JOEY",
+                "value": 1,
+                "dialogs": [
+                    "Virgin alert."
+                ]
+            },
+            {
+                "source": "JOEY",
+                "target": "MANDELLA",
+                "value": 3,
+                "dialogs": [
+                    "Lookin' good, ladies.",
+                    "You could always go with me.  I'm sure William has some friends.",
+                    "Need a ride, ladies?"
+                ]
+            },
+            {
+                "source": "CAMERON",
+                "target": "MANDELLA",
+                "value": 1,
+                "dialogs": [
+                    "Tragic."
+                ]
+            },
+            {
+                "source": "JOEY",
+                "target": "MICHAEL",
+                "value": 9,
+                "dialogs": [
+                    "You could consecrate with her, my friend.",
+                    "Hey.",
+                    "Are you lost?",
+                    "Nope - just came by to chat",
+                    "We don't chat.",
+                    "Well, actually, I thought I'd run an idea by you.  You know, just to see if you're interested.",
+                    "We're not.",
+                    "(continuing) But she can't go out with you because her sister is this insane head case and no one will go out with her. right?",
+                    "Does this conversation have a purpose?"
+                ]
+            },
+            {
+                "source": "CAMERON",
+                "target": "KAT",
+                "value": 1,
+                "dialogs": [
+                    "(yelling) Remove head from sphincter!  Then pedal!"
+                ]
+            },
+            {
+                "source": "KAT",
+                "target": "SHARON",
+                "value": 3,
+                "dialogs": [
+                    "\"Undulating with desire, Adrienne removes her crimson cape, revealing her creamy --\"",
+                    "I guess I got in",
+                    "Ask Bianca who drove her home"
+                ]
+            },
+            {
+                "source": "SHARON",
+                "target": "WALTER",
+                "value": 6,
+                "dialogs": [
+                    "In the microwave.",
+                    "What's a synonym for throbbing?",
+                    "Swollen...turgid.",
+                    "(continuing) Jesus!  Can a man even grab a sandwich before you women start dilating?",
+                    "Tumescent!",
+                    "(to Sharon; as he leaves) You're not helping."
+                ]
+            },
+            {
+                "source": "KAT",
+                "target": "WALTER",
+                "value": 19,
+                "dialogs": [
+                    "(to Kat) Make anyone cry today?",
+                    "Hello, precious.",
+                    "How touching.",
+                    "What's this?  It says Sarah Lawrence?",
+                    "Sarah Lawrence is on the other side of the country.",
+                    "I know.",
+                    "I thought we decided you were going to school here.  At U of 0.",
+                    "This from someone whose diary is devoted to favorite grooming tips?",
+                    "My insurance does not cover PMS",
+                    "Then tell them I had a seizure.",
+                    "Is this about Sarah Lawrence? You punishing me?",
+                    "I thought you were punishing me.",
+                    "Why can't we agree on this?",
+                    "Because you're making decisions for me.",
+                    "As a parent, that's my right",
+                    "So what I want doesn't matter?",
+                    "You're eighteen.  You don't know what you want.  You won't know until you're forty-five and you don't have it.",
+                    "(emphatic) I want to go to an East Coast school! I want you to trust me to make my own choices.  I want --",
+                    "Christ!  I want a night to go by that I'm not staring a contraction in the face."
+                ]
+            },
+            {
+                "source": "BIANCA",
+                "target": "KAT",
+                "value": 7,
+                "dialogs": [
+                    "(continuing) Where've you been?",
+                    "You decided.",
+                    "Is there even a question that we want her to stay?",
+                    "But it's not fair -- she's a mutant, Daddy!",
+                    "Have you ever considered a new look? I mean, seriously, you could have some potential buried under all this hostility.",
+                    "I have the potential to smack the crap out of you if you don't get out of my way.",
+                    "Can you at least start wearing a bra?"
+                ]
+            },
+            {
+                "source": "BIANCA",
+                "target": "WALTER",
+                "value": 8,
+                "dialogs": [
+                    "(eyeing Walter) Nowhere... Hi, Daddy.",
+                    "(to Bianca; upset) Who drove you home?",
+                    "Now don't get upset. Daddy, but there's this boy... and I think he might ask...",
+                    "No! You're not dating until your sister starts dating.  End of discussion.",
+                    "What if she never starts dating?",
+                    "Then neither will you.  And I'll get to sleep at night.",
+                    "This is why you're not dating until your sister does.",
+                    "But she doesn't want to date."
+                ]
+            },
+            {
+                "source": "BIANCA",
+                "target": "CAMERON",
+                "value": 34,
+                "dialogs": [
+                    "Can we make this quick?  Roxanne Korrine and Andrew Barrett are having an incredibly horrendous public break- up on the quad.  Again.",
+                    "(looking down) Okay... then how 'bout we try out some French cuisine.  Saturday?  Night?",
+                    "You're asking me out.  That's so cute. What's your name again?",
+                    "(embarrassed) Forget it.",
+                    "No, no, it's my fault -- we didn't have a proper introduction ---",
+                    "Cameron.",
+                    "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does.",
+                    "Why?",
+                    "Unsolved mystery.  She used to be really popular when she started high school, then it was just like she got sick of it or something.",
+                    "That's a shame.",
+                    "Gosh, if only we could find Kat a boyfriend...",
+                    "Let me see what I can do.",
+                    "C'esc ma tete. This is my head",
+                    "Right.  See?  You're ready for the quiz.",
+                    "I don't want to know how to say that though.  I want to know useful things. Like where the good stores are.  How much does champagne cost?  Stuff like Chat.  I have never in my life had to point out my head to someone.",
+                    "That's because it's such a nice one.",
+                    "(continuing) How is our little Find the Wench A Date plan progressing?",
+                    "Well, there's someone I think might be --",
+                    "Show me",
+                    "Give me a sign when he walks by.  And don't point.",
+                    "There.",
+                    "Where?",
+                    "I guess he didn't see me (calling after Patrick)",
+                    "My God, he's repulsive. He's so perfect!",
+                    "La copine et I 'ami?  La diferance?",
+                    "A \"copine\" is someone you can count on. An \"ami\" is someone who makes promises he can't keep.",
+                    "You got something on your mind?",
+                    "I counted on you to help my cause. You and that thug are obviously failing. Aren't we ever going on our date?",
+                    "You have my word.  As a gentleman",
+                    "You're sweet.",
+                    "(appreciative) How do you get your hair to look like that?",
+                    "Eber's Deep Conditioner every two days. And I never, ever use a blowdryer without the diffuser attachment.",
+                    "You know, I read an article about that.",
+                    "You did?"
+                ]
+            },
+            {
+                "source": "CAMERON",
+                "target": "PEPE",
+                "value": 1,
+                "dialogs": [
+                    "Some people like the Colombian, but it all depends on your acidity preference. Me?  I prefer East African and Indonesian.  You start the day with a Sumatra Boengie or maybe and Ethiopian Sidamo in your cup, you're that much farther ahead than someone drinkin' Cosia Rican or Kona -- you know what I mean?"
+                ]
+            },
+            {
+                "source": "MANDELLA",
+                "target": "TREVOR",
+                "value": 4,
+                "dialogs": [
+                    "Look, it's really easy.",
+                    "You're a freedom fighter. Be proud, sister.",
+                    "(rotely) It's Mandella with two L's.  I am not related to Nelson Mandela.  I am not a political figure.  I do not live in South Africa.  My parents just spent a few too many acid trips thinking they were revolutionaries.",
+                    "But you freed our people"
+                ]
+            },
+            {
+                "source": "BIANCA",
+                "target": "MANDELLA",
+                "value": 1,
+                "dialogs": [
+                    "Your \"people\" are white, suburban high school boys who smoke too much hemp.  I have not freed you, Trevor. (grabbing his arm dramatically) Only you can free yourself."
+                ]
+            },
+            {
+                "source": "JOEY",
+                "target": "PATRICK",
+                "value": 25,
+                "dialogs": [
+                    "Yeah",
+                    "What do you think?",
+                    "Two legs, nice rack...",
+                    "Yeah, whatever.  I want you to go out with her.",
+                    "Sure, Sparky.  I'll get right on it.",
+                    "You just said",
+                    "You need money to take a girl out",
+                    "But you'd go out with her if you had the cake?",
+                    "(sarcastic) Yeah, I'd take her to Europe if I had the plane.",
+                    "You got it, Verona.  I pick up the tab, you do the honors.",
+                    "You're gonna pay me to take out some girl?",
+                    "I can't date her sister until that one gets a boyfriend.  And that's the catch. She doesn't want a boyfriend.",
+                    "I can't take a girl like that out on twenty bucks.",
+                    "(continuing) Take it or leave it.  This isn't a negotiation.",
+                    "When I shell out fifty, I expect results.",
+                    "I'm on it",
+                    "Watching the bitch trash my car doesn't count as a date.",
+                    "I got her under control. She just acts crazed in public to keep up the image.",
+                    "Let me put it to you this way, if you don't get any action, I don't get any action.  So get your ass on hers by the end of the week.",
+                    "I just upped my price",
+                    "(turning) What?",
+                    "A hundred bucks a date.",
+                    "Forget it.",
+                    "Forget her sister, then.",
+                    "You better hope you're as smooth as you think you are, Verona."
+                ]
+            },
+            {
+                "source": "MR. CHAPIN",
+                "target": "PATRICK",
+                "value": 2,
+                "dialogs": [
+                    "Fifty, and you've got your man.",
+                    "(proudly) Good run, Stratford."
+                ]
+            },
+            {
+                "source": "PATRICK",
+                "target": "SCURVY",
+                "value": 1,
+                "dialogs": [
+                    "(calling after her) You're no bargain either, sweetheart."
+                ]
+            },
+            {
+                "source": "MICHAEL",
+                "target": "SCURVY",
+                "value": 1,
+                "dialogs": [
+                    "So I guess the Jeep won't be getting a new Blaupunkt."
+                ]
+            },
+            {
+                "source": "BIANCA",
+                "target": "MICHAEL",
+                "value": 1,
+                "dialogs": [
+                    "He took the bait."
+                ]
+            },
+            {
+                "source": "MICHAEL",
+                "target": "PATRICK",
+                "value": 3,
+                "dialogs": [
+                    "(without turning around) Say it",
+                    "(clearing his throat) What?",
+                    "Ask my attorney."
+                ]
+            }
+        ]
+    }
+}
