@@ -41,13 +41,13 @@ text {
         .force("charge", d3.forceManyBody().strength(-200))
         .force("center", d3.forceCenter(width / 2, height / 2));
 
-    d3.json("jsons/10tings_afterLPA_with_dialogs.json", function(error, graph) {
+    d3.json("jsons/10things_dialogs_scenes_all.json", function(error, graph) {
       if (error) throw error;
 
       var link = svg.append("g")
           .attr("class", "links")
         .selectAll("line")
-        .data(graph.links)
+        .data(graph.all.links)
         .enter().append("line")
           .attr("stroke", function(d) { return edgeColor(d.value); })
           .attr("stroke-width", function(d) { return Math.sqrt(d.value); })
@@ -57,7 +57,7 @@ text {
       var node = svg.append("g")
           .attr("class", "nodes")
         .selectAll("g")
-        .data(graph.nodes)
+        .data(graph.all.nodes)
         .enter().append("g");
 
       var circles = node.append("circle")
@@ -77,15 +77,19 @@ text {
 
           link.style("opacity", 0.2);
 
-          adjacent_nodes = new Set();
+          adjacent_nodes = new Map();   // adj_node_id -> dialogs_between_attention_node_and_adj_node
 
-          d3.select("body").selectAll("line").data(graph.links).style("opacity", function (d2) {
+          d3.select("body").selectAll("line").data(graph.all.links).style("opacity", function (d2) {
               if(d2.target.id == attention_name || d2.source.id == attention_name){
-                  adjacent_nodes.add(d2.target.id);
-                  adjacent_nodes.add(d2.source.id);
-                  return 1.0;
+                if (d2.target.id != attention_name) {
+                  adjacent_nodes.set(d2.target.id, d2.dialogs);
+                }
+                if (d2.source.id != attention_name) {
+                  adjacent_nodes.set(d2.source.id, d2.dialogs);
+                }
+                return 1.0;
               }else{
-                  return 0.2;
+                return 0.2;
               }
           });
 
@@ -94,17 +98,12 @@ text {
 
           var attentioned_dialogs = "";
 
-          graph.dialogs.forEach((item,index,array)=>{
-              if(item['source'] == attention_name){
-//                排除自己跟自己说的话
-                if(item['source'] != item['target']){
-                    attentioned_dialogs += 'said to &nbsp<b>' + item['target'] + '</b>:&nbsp' + item['dialogs'] +'<br>';
-                }
-              }
+          adjacent_nodes.forEach((value, key, map) => {
+            attentioned_dialogs += 'said to &nbsp<b>' + key+ '</b>:&nbsp' + value[0] +'<br>';
           });
+
           var p_dialog_info = document.getElementById('dialog_info');
           p_dialog_info.innerHTML = attentioned_dialogs;
-
 
           var point_info = document.getElementById('point_info');
           var attentioned_point_info = '';
@@ -112,12 +111,10 @@ text {
           attentioned_point_info += '<b>角色重要程度</b>:&nbsp' + d.group + '<br>';
           attentioned_point_info += '<b>相关人物</b>:&nbsp';
 
-          adjacent_nodes.forEach((item,index)=>{
-              attentioned_point_info += item + "&nbsp";
+          adjacent_nodes.forEach((value, key, map) => {
+              attentioned_point_info += key + "&nbsp";
           });
           point_info.innerHTML = attentioned_point_info;
-
-
       });
 
       circles.on("mouseout",function(d) {
@@ -142,11 +139,11 @@ text {
           .text(function(d) { return d.id; });
 
       simulation
-          .nodes(graph.nodes)
+          .nodes(graph.all.nodes)
           .on("tick", ticked);
 
       simulation.force("link")
-          .links(graph.links);
+          .links(graph.all.links);
 
       function ticked() {
         link
