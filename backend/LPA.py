@@ -12,8 +12,8 @@ def loadData(p):
         f = open(p, 'r')
     dict_data = json.load(f)
 
-    links = dict_data['links']
-    nodes = dict_data['nodes']
+    links = dict_data['all']['links']
+    nodes = dict_data['all']['nodes']
 
     node_dic = {}
     index = 0
@@ -89,38 +89,38 @@ def label_propagation(vector_dict, edge_dict):
     return vector_dict
 
 
-def get_afterLPA_json(p, cluster_group):
+def get_afterLPA_json(input_fn, output_fn, cluster_group):
     if sys.version_info.major > 2:
-        f = open(p, 'r', encoding='utf-8')
+        f = open(input_fn, 'r', encoding='utf-8')
     else:
-        f = open(p, 'r')
+        f = open(input_fn, 'r')
     dict_data = json.load(f)
-    nodes = dict_data['nodes']
+    nodes = dict_data['all']['nodes']
 
-    cluster_id = 0
+    m_node_id_cluster_id = dict()   # node_name -> cluster_id
 
-    for value in cluster_group.values():
+    for cluster_id, value in cluster_group.items():
         for person_id in value:
             nodes[int(person_id)]['cluster'] = cluster_id
-        cluster_id += 1
+            m_node_id_cluster_id[nodes[int(person_id)]['id']] = cluster_id
 
-    print(nodes)
+    dict_data['all']['nodes'] = nodes
 
-    dict_data['nodes'] = nodes
-    #保存新json
+    for sid, scene in enumerate(dict_data['scenes']):
+        for nid, node in enumerate(scene['nodes']):
+            dict_data['scenes'][sid]['nodes'][nid]['cluster'] = m_node_id_cluster_id[node['id']]
+    
+    for did, dialog in enumerate(dict_data['dialogs']):
+        for phase in ('source', 'target'):
+            dict_data['dialogs'][did][phase] = {'id': dialog[phase], 'cluster': m_node_id_cluster_id[dialog[phase]]}
 
-    file_path = "../jsons/10tings_afterLPA_with_dialogs.json"
-    json.dump(dict_data, codecs.open(file_path, 'w', encoding='utf-8'), separators=(',', ':'),
+    json.dump(dict_data, codecs.open(output_fn, 'w', encoding='utf-8'), separators=(',', ':'),
               sort_keys=True,
               indent=4)
-    print(dict_data)
-
-
-
 
 
 if __name__ == '__main__':
-    filePath = '../jsons/10tings.json'
+    filePath = '../jsons/10things_dialogs_scenes_all.json'
     vector, edge = loadData(filePath)
     print(vector)
     print(edge)
@@ -142,6 +142,6 @@ if __name__ == '__main__':
         else:
             cluster_group[cluster_id].append(node)
 
-    # print(cluster_group)
+    print(cluster_group)
 
-    get_afterLPA_json("../jsons/10tings_with_dialogs.json",cluster_group)
+    get_afterLPA_json(filePath, "../jsons/10tings_dialogs_scenes_all_LPA.json", cluster_group)

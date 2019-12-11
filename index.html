@@ -41,7 +41,7 @@ text {
         .force("charge", d3.forceManyBody().strength(-200))
         .force("center", d3.forceCenter(width / 2, height / 2));
 
-    d3.json("jsons/10things_dialogs_scenes_all.json", function(error, graph) {
+    d3.json("jsons/10tings_dialogs_scenes_all_LPA.json", function(error, graph) {
       if (error) throw error;
 
       var link = svg.append("g")
