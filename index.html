@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<link rel="stylesheet" href="js_css/bootstrap.min.css">
+<script src="js_css/jquery.min.js"></script>
+<script src="js_css/bootstrap.min.js"></script>
 <style>
 
 .links line {
@@ -18,11 +21,18 @@ text {
 }
 </style>
 <body>
-    <div style="position:absolute; left:40px; bottom:10px; ">
-        <p id="point_info_label"></p>
-        <p id="point_info" style="font-size: 15px;background: rgba(235, 232, 232, 0.548);border-radius: 10px;margin-bottom: 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;border-left-width: 5px;padding-left: 10px;margin-top: 15px;"></p>
-        <p id="dialog_info" style="font-size: 15px;background: rgba(235, 232, 232, 0.548);border-radius: 10px;margin-bottom: 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;border-left-width: 5px;padding-left: 10px;margin-top: 15px;"></p>
+<div class="panel panel-success" style="position:absolute; left:850px; top:40px; width:400px">
+    <div class="panel-heading">
+        <h3 class="panel-title">节点详细信息</h3>
     </div>
+    <div class="panel-body">
+        <p id="point_info" style="font-size: 15px;background: rgba(235, 232, 232, 0.548);border-radius: 10px;margin-bottom: 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;border-left-width: 5px;padding-left: 10px;margin-top: 15px;"></p>
+        <!--<div class = "row pre-scrollable" style="margin:0px;">-->
+            <p  class="pre-scrollable" id="dialog_info" style="font-size: 15px;background: rgba(235, 232, 232, 0.548);border-radius: 10px;margin-bottom: 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;border-left-width: 5px;padding-left: 10px;margin-top: 15px;"></p>
+        <!--</div>-->
+    </div>
+</div>
+
     <svg width="960" height="600"></svg>
     <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
     <script src="d3.v4.min.js"></script>
@@ -67,7 +77,6 @@ text {
               .on("start", dragstarted)
               .on("drag", dragged)
               .on("end", dragended));
-
       circles.on("mouseover",function(d){
           circles.style("opacity", 0.2);
           d3.select(this)
@@ -92,10 +101,8 @@ text {
                 return 0.2;
               }
           });
-
-          var point_info_label = document.getElementById('point_info_label');
-          point_info_label.innerHTML = '节点详细信息';
-
+      });
+      circles.on("click",function(d){
           var attentioned_dialogs = "";
 
           adjacent_nodes.forEach((value, key, map) => {
@@ -109,23 +116,26 @@ text {
           var attentioned_point_info = '';
           attentioned_point_info += '<b>人物姓名</b>:&nbsp' + d.id + '<br>';
           attentioned_point_info += '<b>角色重要程度</b>:&nbsp' + d.group + '<br>';
-          attentioned_point_info += '<b>相关人物</b>:&nbsp';
+          attentioned_point_info += '<b>相关人物</b>:';
 
+          index = 0;
           adjacent_nodes.forEach((value, key, map) => {
+              if(index %4 == 0)
+                  attentioned_point_info += '<br>';
               attentioned_point_info += key + "&nbsp";
+              index ++;
           });
+          attentioned_point_info += '<br>';
           point_info.innerHTML = attentioned_point_info;
       });
 
       circles.on("mouseout",function(d) {
           circles.style("opacity", 1.0);
           link.style("opacity", 1.0);
-          var p_dialog_info = document.getElementById('dialog_info');
-          p_dialog_info.innerHTML = '';
-          var p_point_info = document.getElementById('point_info');
-          p_point_info.innerHTML = '';
-           var point_info_label = document.getElementById('point_info_label');
-          point_info_label.innerHTML = '';
+//          var p_dialog_info = document.getElementById('dialog_info');
+//          p_dialog_info.innerHTML = '';
+//          var p_point_info = document.getElementById('point_info');
+//          p_point_info.innerHTML = '';
       });
 
       var lables = node.append("text")
