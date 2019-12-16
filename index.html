@@ -9,19 +9,37 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <script src="d3.v4.min.js"></script>
+
+<script src='javascript/echarts.simple.js'></script>
+<script src='javascript/echarts-wordcloud.js'></script>
+<!--<script src='javascript/wordcloud.js'></script>-->
+
 <script src="javascript/timeSliderLogic.js"></script>
 <script src="javascript/forceDirectedGraph.js"></script>
 <link href="css/d3RangeSlider.css" rel="stylesheet">
 <link href="css/graph.css" rel="stylesheet">
 <link href="css/detail.css" rel="stylesheet">
+<style>
+    #wordcloud {
+        width: 30%;
+        height: 20%;
+        margin: 0;
+    }
+</style>
 
 <body>
 
+<!--word cloud-->
+<h3 style="position:absolute; left:850px; top:0px;"><span class="label label-success">相关人物</span></h3>
+<div id='wordcloud' style="position:absolute; left:910px; top:5px;"></div>
+<script src="javascript/wordcloud.js"></script>
+
 <!--detain info list-->
-<div class="panel panel-success">
+<div class="panel panel-success" style=" position: absolute; left: 850px; top: 150px; width: 400px;">
     <div class="panel-heading">
         <h3 class="panel-title">节点详细信息</h3>
     </div>
+
     <div class="panel-body">
         <p id="point_info"></p>
         <!--<div class = "row pre-scrollable" style="margin:0px;">-->
@@ -30,9 +48,8 @@
     </div>
 </div>
 
+
 <svg width="960" height="600"></svg>
-
-
 <script>
 
     var svg = d3.select("svg"),
@@ -60,18 +77,18 @@
 
         // draw edges in the svg
         var link = svg.append("g")
-            .attr("class", "links")
-            .selectAll("line")
-            .data(graph.all.links)
-            .enter().append("line")
-            .attr("stroke", function (d) {
-                return edgeColor(d.value);
-            })
-            .attr("stroke-width", function (d) {
-                return Math.sqrt(d.value);
-            })
-            .style("opacity", 1)
-        ;
+                .attr("class", "links")
+                .selectAll("line")
+                .data(graph.all.links)
+                .enter().append("line")
+                .attr("stroke", function (d) {
+                    return edgeColor(d.value);
+                })
+                .attr("stroke-width", function (d) {
+                    return Math.sqrt(d.value);
+                })
+                .style("opacity", 1)
+            ;
 
 
         // draw nodes in the svg
@@ -94,23 +111,60 @@
             .on("mouseover", nodeMouseOver)
             .on("click", nodeClick)
             .on("mouseout", nodeMouseOut);
-        
+
+
+        function nodeClick(d) {
+            var attentioned_dialogs = "";
+            adjacent_nodes.forEach((value, key, map) => {
+                attentioned_dialogs += 'said to &nbsp<b>' + key + '</b>:&nbsp' + value[0] + '<br>';
+            });
+            var p_dialog_info = document.getElementById('dialog_info');
+            p_dialog_info.innerHTML = attentioned_dialogs;
+            var point_info = document.getElementById('point_info');
+            var attentioned_point_info = '';
+            attentioned_point_info += '<b>人物姓名</b>:&nbsp' + d.id + '<br>';
+            attentioned_point_info += '<b>角色重要程度</b>:&nbsp' + d.group + '<br>';
+            attentioned_point_info += '<b>相关人物</b>:';
+            index = 0;
+            adjacent_nodes.forEach((value, key, map) => {
+                if (index % 4 == 0)
+                    attentioned_point_info += '<br>';
+                attentioned_point_info += key + "&nbsp";
+                index++;
+            });
+            attentioned_point_info += '<br>';
+            point_info.innerHTML = attentioned_point_info;
+
+            var words = new Array();;
+            nodes_for_wordcloud.forEach((value, key, map) => {
+                words.push({"name":key,"value":value});
+            });
+
+            draw_word_cloud(words);
+
+        }
+
         function nodeMouseOver(d) {
-            circles.attr("fill", "grey");
-            d3.select(this).attr("fill", "green");
+            circles.attr("fill", "#60acfc");
+            d3.select(this).attr("fill", "#feb64d");
             var attention_name = d.id;
             adjacent_nodes = new Map();   // adj_node_id -> dialogs_between_attention_node_and_adj_node
+            nodes_for_wordcloud = new Map();
+
+
             d3.select("body").selectAll("line").data(cur_edges).attr("stroke", function (d2) {
                 if (d2.target.id == attention_name || d2.source.id == attention_name) {
                     if (d2.target.id != attention_name) {
                         adjacent_nodes.set(d2.target.id, d2.dialogs);
+                        nodes_for_wordcloud.set(d2.target.id, d2.value);
                     }
                     if (d2.source.id != attention_name) {
                         adjacent_nodes.set(d2.source.id, d2.dialogs);
+                        nodes_for_wordcloud.set(d2.source.id, d2.value);
                     }
-                    return "green";
+                    return "#feb64d";
                 } else {
-                    return "grey";
+                    return "#60acfc";
                 }
             });
         }
@@ -137,8 +191,8 @@
 
         function ticked() {
             link.attr("x1", function (d) {
-                    return d.source.x;
-                })
+                return d.source.x;
+            })
                 .attr("y1", function (d) {
                     return d.source.y;
                 })
@@ -148,10 +202,10 @@
                 .attr("y2", function (d) {
                     return d.target.y;
                 });
-            
+
             node.attr("transform", function (d) {
-                    return "translate(" + d.x + "," + d.y + ")";
-                })
+                return "translate(" + d.x + "," + d.y + ")";
+            })
         }
 
         const total_link_num = graph.all.links.length;
@@ -173,7 +227,9 @@
                     t.add(cur_edges[i].source);
                     t.add(cur_edges[i].target);
                 }
-                cur_nodes = [...t];
+                cur_nodes = [...t
+            ]
+                ;
                 reDraw();
             }
         }
@@ -186,7 +242,7 @@
             node.exit().remove();
 
             node = node.enter().append("g").attr("class", "nodes").merge(node);
-            
+
             circles = node.append("circle")
                 .attr("r", function (d) {
                     return 4 * Math.pow(d.group, 0.3);
@@ -201,7 +257,7 @@
                 .on("mouseover", nodeMouseOver)
                 .on("click", nodeClick)
                 .on("mouseout", nodeMouseOut);
-            
+
             labels = node.append("text")
                 .text(function (d) {
                     return d.id;
