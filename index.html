@@ -97,10 +97,10 @@
         
         function nodeMouseOver(d) {
             circles.attr("fill", "grey");
-            d3.select(this).attr("fill", "red");
+            d3.select(this).attr("fill", "green");
             var attention_name = d.id;
             adjacent_nodes = new Map();   // adj_node_id -> dialogs_between_attention_node_and_adj_node
-            d3.select("body").selectAll("line").data(cur_edges).style("opacity", function (d2) {
+            d3.select("body").selectAll("line").data(cur_edges).attr("stroke", function (d2) {
                 if (d2.target.id == attention_name || d2.source.id == attention_name) {
                     if (d2.target.id != attention_name) {
                         adjacent_nodes.set(d2.target.id, d2.dialogs);
@@ -108,9 +108,9 @@
                     if (d2.source.id != attention_name) {
                         adjacent_nodes.set(d2.source.id, d2.dialogs);
                     }
-                    return 1.0;
+                    return "green";
                 } else {
-                    return 0.2;
+                    return "grey";
                 }
             });
         }
@@ -120,7 +120,9 @@
             circles.attr("fill", function (d) {
                 return nodeColor(d.cluster);
             });
-            d3.select("body").selectAll("line").data(cur_edges).style("opacity", 1.0);
+            d3.select("body").selectAll("line").data(cur_edges).attr("stroke", function (d) {
+                return edgeColor(d.value);
+            });
         }
 
         var labels = node.append("text")
