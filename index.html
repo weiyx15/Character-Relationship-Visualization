@@ -96,7 +96,7 @@
             .on("mouseout", nodeMouseOut);
         
         function nodeMouseOver(d) {
-            circles.style("opacity", 0.1);
+            d3.select("body").selectAll("circle").style("opacity", 0.05);
             d3.select(this)
                 .style("opacity", 1.0);
             var attention_name = d.id;
