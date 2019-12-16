@@ -100,7 +100,6 @@
             d3.select(this)
                 .style("opacity", 1.0);
             var attention_name = d.id;
-            link.style("opacity", 0.2);
             adjacent_nodes = new Map();   // adj_node_id -> dialogs_between_attention_node_and_adj_node
             d3.select("body").selectAll("line").data(cur_edges).style("opacity", function (d2) {
                 if (d2.target.id == attention_name || d2.source.id == attention_name) {
