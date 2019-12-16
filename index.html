@@ -96,9 +96,8 @@
             .on("mouseout", nodeMouseOut);
         
         function nodeMouseOver(d) {
-            d3.select("body").selectAll("circle").style("opacity", 0.05);
-            d3.select(this)
-                .style("opacity", 1.0);
+            circles.attr("fill", "grey");
+            d3.select(this).attr("fill", "red");
             var attention_name = d.id;
             adjacent_nodes = new Map();   // adj_node_id -> dialogs_between_attention_node_and_adj_node
             d3.select("body").selectAll("line").data(cur_edges).style("opacity", function (d2) {
@@ -118,12 +117,10 @@
 
 
         function nodeMouseOut(d) {
-            circles.style("opacity", 1.0);
-            link.style("opacity", 1.0);
-//          var p_dialog_info = document.getElementById('dialog_info');
-//          p_dialog_info.innerHTML = '';
-//          var p_point_info = document.getElementById('point_info');
-//          p_point_info.innerHTML = '';
+            circles.attr("fill", function (d) {
+                return nodeColor(d.cluster);
+            });
+            d3.select("body").selectAll("line").data(cur_edges).style("opacity", 1.0);
         }
 
         var labels = node.append("text")
@@ -187,7 +184,7 @@
             node.exit().remove();
 
             node = node.enter().append("g").attr("class", "nodes").merge(node);
-
+            
             circles = node.append("circle")
                 .attr("r", function (d) {
                     return 4 * Math.pow(d.group, 0.3);
