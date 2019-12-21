@@ -1,249 +1,127 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="javascript/jquery.min.js"></script>
-<script src="javascript/bootstrap.min.js"></script>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Drama Role Relation Visualization</title>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
-<script src="d3.v4.min.js"></script>
-<script src="javascript/timeSliderLogic.js"></script>
-<script src="javascript/forceDirectedGraph.js"></script>
-<link href="css/d3RangeSlider.css" rel="stylesheet">
-<link href="css/graph.css" rel="stylesheet">
-<link href="css/detail.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<body>
-
-<!--detain info list-->
-<div class="panel panel-success">
-    <div class="panel-heading">
-        <h3 class="panel-title">节点详细信息</h3>
-    </div>
-    <div class="panel-body">
-        <p id="point_info"></p>
-        <!--<div class = "row pre-scrollable" style="margin:0px;">-->
-        <p class="pre-scrollable" id="dialog_info"></p>
-        <!--</div>-->
-    </div>
-</div>
-
-<svg width="960" height="600"></svg>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
 
 
-<script>
-
-    var svg = d3.select("svg"),
-        width = +svg.attr("width"),
-        height = +svg.attr("height");
-
-    var nodeColor = d3.scaleOrdinal(d3.schemeCategory20);
-
-    var edgeColor = d3.scaleOrdinal(d3.schemeCategory10);
-
-    var simulation = d3.forceSimulation()
-        .force("link", d3.forceLink().id(function (d) {
-            return d.id;
-        }))
-        .force("charge", d3.forceManyBody().strength(-200))
-        .force("center", d3.forceCenter(width / 2, height / 2));
-
-    d3.json("jsons/10tings_dialogs_scenes_all_LPA.json", function (error, graph) {
-        if (error) throw error;
-
-        var all_nodes = graph.all.nodes;
-        var all_edges = graph.all.links;
-        var cur_nodes = all_nodes;
-        var cur_edges = all_edges;
-
-        // draw edges in the svg
-        var link = svg.append("g")
-            .attr("class", "links")
-            .selectAll("line")
-            .data(graph.all.links)
-            .enter().append("line")
-            .attr("stroke", function (d) {
-                return edgeColor(d.value);
-            })
-            .attr("stroke-width", function (d) {
-                return Math.sqrt(d.value);
-            })
-            .style("opacity", 1)
-        ;
-
-
-        // draw nodes in the svg
-        var node = svg.append("g")
-            .attr("class", "nodes")
-            .selectAll("g")
-            .data(graph.all.nodes)
-            .enter().append("g");
-        var circles = node.append("circle")
-            .attr("r", function (d) {
-                return 4 * Math.pow(d.group, 0.3);
-            })
-            .attr("fill", function (d) {
-                return nodeColor(d.cluster);
-            })
-            .call(d3.drag()
-                .on("start", dragstarted)
-                .on("drag", dragged)
-                .on("end", dragended))
-            .on("mouseover", nodeMouseOver)
-            .on("click", nodeClick)
-            .on("mouseout", nodeMouseOut);
-
-        function nodeMouseOver(d) {
-            circles.style("opacity", 0.2);
-            d3.select(this)
-                .style("opacity", 1.0);
-            var attention_name = d.id;
-            link.style("opacity", 0.2);
-            adjacent_nodes = new Map();   // adj_node_id -> dialogs_between_attention_node_and_adj_node
-            d3.select("body").selectAll("line").data(graph.all.links).style("opacity", function (d2) {
-                if (d2.target.id == attention_name || d2.source.id == attention_name) {
-                    if (d2.target.id != attention_name) {
-                        adjacent_nodes.set(d2.target.id, d2.dialogs);
-                    }
-                    if (d2.source.id != attention_name) {
-                        adjacent_nodes.set(d2.source.id, d2.dialogs);
-                    }
-                    return 1.0;
-                } else {
-                    return 0.2;
-                }
-            });
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
-
-        function nodeMouseOut(d) {
-            circles.style("opacity", 1.0);
-            link.style("opacity", 1.0);
-//          var p_dialog_info = document.getElementById('dialog_info');
-//          p_dialog_info.innerHTML = '';
-//          var p_point_info = document.getElementById('point_info');
-//          p_point_info.innerHTML = '';
-        }
-
-
-        var lables = node.append("text")
-            .text(function (d) {
-                return d.id;
-            })
-            .attr('x', 6)
-            .attr('y', 3);
-
-        node.append("title")
-            .text(function (d) {
-                return d.id;
-            });
-
-        simulation.nodes(cur_nodes).on("tick", ticked);
-        simulation.force("link").links(cur_edges);
-
-        function ticked() {
-            link
-                .attr("x1", function (d) {
-                    return d.source.x;
-                })
-                .attr("y1", function (d) {
-                    return d.source.y;
-                })
-                .attr("x2", function (d) {
-                    return d.target.x;
-                })
-                .attr("y2", function (d) {
-                    return d.target.y;
-                });
-
-            node
-                .attr("transform", function (d) {
-                    return "translate(" + d.x + "," + d.y + ")";
-                })
-        }
-
-        const total_link_num = graph.all.links.length;
-
-        // time slider
-        var slider = createD3RangeSlider(0, total_link_num - 1, "#container", true);
-        var start_pt, end_pt;
-        var t = new Set();
-        slider.onChange(sliderChange);
-
-        function sliderChange(newRange) {
-            d3.select("#range-label").html(newRange.begin + " &mdash; " + newRange.end);
-            if (start_pt === newRange.begin && end_pt === newRange.end) {
-                // console.log("skip")
-            } else {
-                cur_edges = all_edges.slice(newRange.begin, newRange.end);
-                t.clear();
-                for (var i in cur_edges) {
-                    t.add(cur_edges[i].source);
-                    t.add(cur_edges[i].target);
-                }
-                cur_nodes = [...t];
-                reDraw();
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
             }
         }
-
-        function reDraw() {
-            node = node.data(cur_nodes, function (d) {
-                return d.id;
-            });
-
-            node.exit().remove();
-            node = node.enter()
-                .append("circle")
-                .attr("r", function (d) {
-                    return 4 * Math.pow(d.group, 0.3);
-                })
-                .attr("fill", function (d) {
-                    return nodeColor(d.cluster);
-                })
-                .call(d3.drag()
-                    .on("start", dragstarted)
-                    .on("drag", dragged)
-                    .on("end", dragended))
-                .on("mouseover", nodeMouseOver)
-                .on("click", nodeClick)
-                .on("mouseout", nodeMouseOut)
-                .merge(node);
-
-            link = link.data(cur_edges, function (d) {
-                return d.source.id + "-" + d.target.id;
-            });
-            link.exit().remove();
-            link = link.enter().append("line")
-                .attr("stroke", function (d) {
-                    return edgeColor(d.value);
-                })
-                .attr("stroke-width", function (d) {
-                    return Math.sqrt(d.value);
-                })
-                .style("opacity", 1).merge(link);
-
-            simulation.nodes(cur_nodes);
-            simulation.force("link").links(cur_edges);
-            simulation.alpha(1).restart();
-        }
-
-        slider.range(0, 10);
-    });
-
-
-</script>
-
-
-<!--time slider-->
-<div class="container">
-    <div class="section">
-        <div id="container"></div>
-        <div id="range-label"></div>
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/album.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">About</h4>
+                    <p class="text-muted">Add some information about the album below, the author, or any other
+                        background context. Make it a few sentences long so folks can pick up some informative tidbits.
+                        Then, link them off to some social networking sites or contact information.</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                        <li><a href="#" class="text-white">Like on Facebook</a></li>
+                        <li><a href="#" class="text-white">Email me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
+                     viewBox="0 0 24 24" focusable="false">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                </svg>
+                <strong>Graph Visualization</strong>
+            </a>
+        </div>
+    </div>
+</header>
 
-</div>
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1>Drama Role Relation Visualization Based on Force Directed Graph</h1>
+            <p class="lead text-muted">This is the final project for the course </p>
+            <p class="lead text-muted">"Information Visualization & Visual Analysis"</p>
+            <img src="imgs/fig.png" , style="width: 500px">
+        </div>
+    </section>
+
+    <!--  <div align="center">-->
+    <div style="margin: 0 auto; padding: 0 20%; text-align: center">
+        There are three members in our group. They are Yuxuan Wei, Yufeng Chen, Yuyuan
+        Kang.
+        This project is used to visualize role relation in a given drama. It visualizes the relation based on
+        force-directed
+        graph. There are two main functions, one for small graph allowing using time slider to find out relation
+        changes as the story goes, one for big graph allowing expanding and contract details.
+    </div>
+    <!--  </div>-->
+    <section class="jumbotron text-center">
+        <div class="container">
+            <p class="lead text-muted">Click the left button to explore function one, right button to function
+                two.</p>
+            <p>
+                <a href="time_slider.html" class="btn btn-primary my-2">Time slider</a>
+                <a href="big_graph.html" class="btn btn-primary my-2">Large Graph</a>
+            </p>
+        </div>
+    </section>
 
 
+</main>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/javascript/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="javascript/bootstrap.bundle.min.js"
+        integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+        crossorigin="anonymous"></script>
 </body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/d3.v4.min.js"></script>
+<script src='javascript/echarts.simple.js'></script>
+<script src='javascript/echarts-wordcloud.js'></script>
+<script src="javascript/timeSliderLogic.js"></script>
+<script src="javascript/forceDirectedGraph.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/d3RangeSlider.css">
+<link rel="stylesheet" href="css/graph.css">
+<link rel="stylesheet" href="css/detail.css">
+<link rel="stylesheet" href="css/Raleway.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<style>
+    #wordcloud {
+        width: 30%;
+        height: 20%;
+        margin: 0;
+    }
+</style>
+
+<!--word cloud-->
+<h3 style="position:absolute; left:850px; top:0px;"><span class="label label-success">相关人物</span></h3>
+<div id='wordcloud' style="position:absolute; left:910px; top:5px;"></div>
+<script src="javascript/wordcloud.js"></script>
+
+<!--detain info list-->
+<div class="panel panel-success" style=" position: absolute; left: 850px; top: 150px; width: 400px;">
+    <div class="panel-heading">
+        <h3 class="panel-title">节点详细信息</h3>
+    </div>
+
+    <div class="panel-body">
+        <p id="point_info"></p>
+        <!--<div class = "row pre-scrollable" style="margin:0px;">-->
+        <p class="pre-scrollable" id="dialog_info"></p>
+        <!--</div>-->
+    </div>
+</div>
+
+<svg width="960" height="600"></svg>
+
+<script>
+
+    var svg = d3.select("svg"),
+        width = +svg.attr("width"),
+        height = +svg.attr("height");
+
+    var nodeColor = d3.scaleOrdinal(d3.schemeCategory20);
+
+    var edgeColor = d3.scaleOrdinal(d3.schemeCategory10);
+
+    var simulation = d3.forceSimulation()
+        .force("link", d3.forceLink().id(function (d) {
+            return d.id;
+        }))
+        .force("charge", d3.forceManyBody().strength(-200))
+        .force("center", d3.forceCenter(width / 2, height / 2));
+
+    d3.json("jsons/10tings_dialogs_scenes_all_LPA.json", function (error, graph) {
+        if (error) throw error;
+
+        var all_nodes = graph.all.nodes;
+        var all_edges = graph.all.links;
+        var cur_nodes = all_nodes;
+        var cur_edges = all_edges;
+
+        // draw edges in the svg
+        var link = svg.append("g")
+            .attr("class", "links")
+            .selectAll("line")
+            .data(graph.all.links)
+            .enter().append("line")
+            .attr("stroke", function (d) {
+                return edgeColor(d.value);
+            })
+            .attr("stroke-width", function (d) {
+                return Math.sqrt(d.value);
+            })
+            .style("opacity", 1)
+        ;
+
+
+        // draw nodes in the svg
+        var node = svg.append("g")
+            .attr("class", "nodes")
+            .selectAll("g")
+            .data(graph.all.nodes)
+            .enter().append("g");
+        var circles = node.append("circle")
+            .attr("r", function (d) {
+                return 4 * Math.pow(d.group, 0.3);
+            })
+            .attr("fill", function (d) {
+                return nodeColor(d.cluster);
+            })
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended))
+            .on("mouseover", nodeMouseOver)
+            .on("click", nodeClick)
+            .on("mouseout", nodeMouseOut);
+
+
+        function nodeClick(d) {
+            var attentioned_dialogs = "";
+            adjacent_nodes.forEach((value, key, map) => {
+                attentioned_dialogs += 'said to &nbsp<b>' + key + '</b>:&nbsp' + value[0] + '<br>';
+            });
+            var p_dialog_info = document.getElementById('dialog_info');
+            p_dialog_info.innerHTML = attentioned_dialogs;
+            var point_info = document.getElementById('point_info');
+            var attentioned_point_info = '';
+            attentioned_point_info += '<b>人物姓名</b>:&nbsp' + d.id + '<br>';
+            attentioned_point_info += '<b>角色重要程度</b>:&nbsp' + d.group + '<br>';
+            attentioned_point_info += '<b>相关人物</b>:';
+            index = 0;
+            adjacent_nodes.forEach((value, key, map) => {
+                if (index % 4 == 0)
+                    attentioned_point_info += '<br>';
+                attentioned_point_info += key + "&nbsp";
+                index++;
+            });
+            attentioned_point_info += '<br>';
+            point_info.innerHTML = attentioned_point_info;
+
+            var words = new Array();
+            ;
+            nodes_for_wordcloud.forEach((value, key, map) => {
+                words.push({"name": key, "value": value});
+            });
+
+            draw_word_cloud(words);
+
+        }
+
+        function nodeMouseOver(d) {
+            circles.attr("fill", "#60acfc");
+            d3.select(this).attr("fill", "#feb64d");
+            var attention_name = d.id;
+            adjacent_nodes = new Map();   // adj_node_id -> dialogs_between_attention_node_and_adj_node
+            nodes_for_wordcloud = new Map();
+
+
+            d3.select("body").selectAll("line").data(cur_edges).attr("stroke", function (d2) {
+                if (d2.target.id == attention_name || d2.source.id == attention_name) {
+                    if (d2.target.id != attention_name) {
+                        adjacent_nodes.set(d2.target.id, d2.dialogs);
+                        nodes_for_wordcloud.set(d2.target.id, d2.value);
+                    }
+                    if (d2.source.id != attention_name) {
+                        adjacent_nodes.set(d2.source.id, d2.dialogs);
+                        nodes_for_wordcloud.set(d2.source.id, d2.value);
+                    }
+                    return "#feb64d";
+                } else {
+                    return "#60acfc";
+                }
+            });
+        }
+
+
+        function nodeMouseOut(d) {
+            circles.attr("fill", function (d) {
+                return nodeColor(d.cluster);
+            });
+            d3.select("body").selectAll("line").data(cur_edges).attr("stroke", function (d) {
+                return edgeColor(d.value);
+            });
+        }
+
+        var labels = node.append("text")
+            .text(function (d) {
+                return d.id;
+            })
+            .attr('x', 6)
+            .attr('y', 3);
+
+        simulation.nodes(cur_nodes).on("tick", ticked);
+        simulation.force("link").links(cur_edges);
+
+        function ticked() {
+            link.attr("x1", function (d) {
+                return d.source.x;
+            })
+                .attr("y1", function (d) {
+                    return d.source.y;
+                })
+                .attr("x2", function (d) {
+                    return d.target.x;
+                })
+                .attr("y2", function (d) {
+                    return d.target.y;
+                });
+
+            node.attr("transform", function (d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            })
+        }
+
+        const total_link_num = graph.all.links.length;
+
+        // time slider
+        var slider = createD3RangeSlider(0, total_link_num - 1, "#container", true);
+        var start_pt, end_pt;
+        var t = new Set();
+        slider.onChange(sliderChange);
+
+        function sliderChange(newRange) {
+            // d3.select("#range-label").html(newRange.begin + " &mdash; " + newRange.end);
+            if (start_pt === newRange.begin && end_pt === newRange.end) {
+                // console.log("skip")
+            } else {
+                cur_edges = all_edges.slice(newRange.begin, newRange.end);
+                t.clear();
+                for (var i in cur_edges) {
+                    t.add(cur_edges[i].source);
+                    t.add(cur_edges[i].target);
+                }
+                cur_nodes = [...t];
+                reDraw();
+            }
+        }
+
+        function reDraw() {
+            node = node.data(cur_nodes, function (d) {
+                return d.id;
+            });
+
+            node.exit().remove();
+
+            node = node.enter().append("g").attr("class", "nodes").merge(node);
+
+            circles = node.append("circle")
+                .attr("r", function (d) {
+                    return 4 * Math.pow(d.group, 0.3);
+                })
+                .attr("fill", function (d) {
+                    return nodeColor(d.cluster);
+                })
+                .call(d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended))
+                .on("mouseover", nodeMouseOver)
+                .on("click", nodeClick)
+                .on("mouseout", nodeMouseOut);
+
+            labels = node.append("text")
+                .text(function (d) {
+                    return d.id;
+                })
+                .attr('x', 6)
+                .attr('y', 3);
+
+            link = link.data(cur_edges, function (d) {
+                return d.source.id + "-" + d.target.id;
+            });
+            link.exit().remove();
+            link = link.enter().append("line")
+                .attr("stroke", function (d) {
+                    return edgeColor(d.value);
+                })
+                .attr("stroke-width", function (d) {
+                    return Math.sqrt(d.value);
+                })
+                .style("opacity", 1).merge(link);
+
+            simulation.nodes(cur_nodes).on("tick", ticked);
+            simulation.force("link").links(cur_edges);
+            simulation.alpha(1).restart();
+        }
+
+        slider.range(0, 10);
+    });
+
+
+</script>
+
+
+<!--time slider-->
+<div class="container">
+    <div class="section">
+        <div id="container" , style="width:55%"></div>
+        <div id="range-label" , style="width:55%">time slider</div>
+    </div>
+</div>
