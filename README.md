@@ -1,7 +1,5 @@
 # Course Project: Character Relationship Visualization
 Course project for visualization course, 2019 Fall, School of Software, Tsinghua University
-## TODO
-- 时间轨道
 ## Message
 数据形式重要变更：
 - 解析剧本增加：(1) 按每句对话划分nodes和links; (2) 按每一幕划分nodes和links; (3) 在links上存储所有dialogs; (4) 恢复LPA聚类功能，LPA聚类所得的节点的`cluster`为节点颜色的唯一来源
