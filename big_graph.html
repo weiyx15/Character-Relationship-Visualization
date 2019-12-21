@@ -1,17 +1,55 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="css/bundling.css">
-<script src="javascript/d3.v2.js"></script>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Large Graph</title>
 
-<div style="position:absolute; left:40px; bottom:100px; ">
-    <p id="point_info_label"></p>
-    <p id="point_info"
-       style="font-size: 15px;background: rgba(235, 232, 232, 0.548);border-radius: 10px;margin-bottom: 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;border-left-width: 5px;padding-left: 10px;margin-top: 15px;"></p>
+    <link rel="stylesheet" href="css/bundling.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="javascript/d3.v2.js"></script>
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
+                     viewBox="0 0 24 24" focusable="false">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                </svg>
+                <strong>Graph Visualization</strong>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!--<div style="position:absolute; left:40px; bottom:100px; ">-->
+    <!--<p id="point_info_label"></p>-->
+    <!--<p id="point_info"-->
+       <!--style="font-size: 15px;background: rgba(235, 232, 232, 0.548);border-radius: 10px;margin-bottom: 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;border-left-width: 5px;padding-left: 10px;margin-top: 15px;"></p>-->
+<!--</div>-->
+
+<!--detain info list-->
+<div class="panel mypanel" style=" position: absolute; left: 975px; top: 150px; width: 400px;">
+    <div class="panel-heading">
+        <h3 class="panel-title" id="point_info_label">节点详细信息</h3>
+    </div>
+
+    <div class="panel-body">
+        <p id="point_info"></p>
+    </div>
 </div>
 
 <script type="text/javascript">
-    var width = 1200,     // svg width
-        height = 500,     // svg height
+    var width = 960,     // svg width
+        height = 600,     // svg height
         dr = 4,      // default point radius
         off = 15,    // cluster hull offset
         expand = {}, // expanded clusters
@@ -302,10 +340,6 @@
         }).on("mouseout", function (d) {
             node.style("opacity", 1.0);
             link.style("opacity", 1.0);
-            var p_point_info = document.getElementById('point_info');
-            p_point_info.innerHTML = '';
-            var point_info_label = document.getElementById('point_info_label');
-            point_info_label.innerHTML = '';
         });
 
         node.call(force.drag);
@@ -338,3 +372,5 @@
         });
     }
 </script>
+</body>
+</html>
