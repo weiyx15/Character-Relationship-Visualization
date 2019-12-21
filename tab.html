@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/tab.js"></script>
+<link rel="stylesheet" href="css/tab.css">
+
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, '小图')">小图</button>
+  <button class="tablinks" onclick="openTab(event, '大图')">大图</button>
+</div>
+
+<div id="小图" class="tabcontent">
+    <iframe name="small" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"  width="100%" height="700" src="index.html"></iframe>
+</div>
+
+<div id="大图" class="tabcontent">
+    <iframe name="large" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"  width="100%" height="700" src="bundling.html"></iframe>
+</div>
+
+</body>
